@@ -1,4 +1,4 @@
-if (process.env.APOS_UPLOADFS_ASSETS) {
+if (process.env.AZURE_STORAGE_ACCOUNTNAME) {
   module.exports = {
     options: {
       uploadfs: {
