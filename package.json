@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
-    "build": "NODE_ENV=production node app @apostrophecms/asset:build",
+    "build": "bash ./scripts/heroku-release-tasks",
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
   },
