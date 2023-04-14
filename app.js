@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 require('apostrophe')({
   shortName: 'apos-theme',
   modules: {
