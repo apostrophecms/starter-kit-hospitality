@@ -1,3 +1,14 @@
+@use "sass:math";
+
+$outerWidth: 1100px;
+$spacer: 50px;
+
+$primary: #000;
+$secondary: #fff;
+$link-color: red;
+
+$font-family: Arial, Helvetica, sans-serif;
+
 $color-purple: #6236ff;
 $color-purple-light: #8264f1;
 $color-pink: #fe5599;
