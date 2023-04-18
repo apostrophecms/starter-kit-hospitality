@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+@use "sass:math";
+
+$outerWidth: 1100px;
+$spacer: 50px;
+
+$brand-red: #ea433a;
+$brand-mustard: #cc9300;
+$brand-purple: #b327bf;
+$brand-blue: #66f;
+$brand-seafoam: #00bf9a;
+$link-color: rgb(101, 22, 221);
+
+>>>>>>> e6c0c6f6bc455bc98c75a0aa65602e61711a1420
 @import url("~normalize.css");
 // NOTE: We're using a `.bp-` namespace to indicate these are the boilerplate
 // styles.
@@ -6,3 +21,8 @@
 @import "./scss/_layout";
 @import "./scss/_welcome";
 @import "./scss/_widgets";
+<<<<<<< HEAD
+=======
+
+@import "./scss/columns";
+>>>>>>> e6c0c6f6bc455bc98c75a0aa65602e61711a1420

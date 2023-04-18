@@ -48,6 +48,7 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
 
+<<<<<<< HEAD
     // Pieces
     'menu-item': {},
 
@@ -58,5 +59,9 @@ require('apostrophe')({
     'image-gallery-widget': {},
     'menu-item-widget': {},
     'side-by-side-widget': {}
+=======
+    // Widgets
+    'columns-widget': {}
+>>>>>>> e6c0c6f6bc455bc98c75a0aa65602e61711a1420
   }
 });

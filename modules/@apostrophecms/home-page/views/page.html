@@ -29,20 +29,9 @@
     <p>
       For a guide on how to configure and customize this project, <a href="https://a3.docs.apostrophecms.com/">please check out the Apostrophe 3 documentation</a>.
     </p>
-    <div class="bp-welcome__area">
-      {% if data.user %}
-        {# Message only for logged in users. #}
-        {% if not data.query['apos-edit'] %}
-          <p>
-            Enter <span class="bp-mode">Edit</span> mode from the admin bar <span style="display:inline-block; transform: rotate(45deg)">👆</span> to begin.
-          </p>
-        {% else %}
-          <p>
-            Add and edit content below in the content area. 👇
-          </p>
-        {% endif %}
-      {% endif %}
-      {% area data.page, 'main' %}
-    </div>
+    
+  </section>
+  <section>
+    {% area data.page, 'main' %}
   </section>
 {% endblock %}
