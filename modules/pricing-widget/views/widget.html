@@ -1,0 +1,20 @@
+<h2>Pricing widget</h2>
+<div>
+  {% for card in data.widget.cards %}
+    <div class="accordion-item">
+      {{ card.title }}
+      <br>
+      {% area card, 'content' %}
+      <br>
+      <ul>
+        {% for feature in card.features %}
+          <li>&#x2713; {{ feature.title }}</li>
+        {% endfor %}
+      </ul>
+      {% for button in card.buttons %}
+        <small>{{ button | dump }}</small>
+        <br>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

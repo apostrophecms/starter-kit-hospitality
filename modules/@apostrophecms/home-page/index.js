@@ -19,6 +19,9 @@ module.exports = {
             '@apostrophecms/image': {},
 
             // Marketing widgets
+            accordion: {},
+            pricing: {},
+            'sign-up-form': {},
             'team-member': {}
           }
         }

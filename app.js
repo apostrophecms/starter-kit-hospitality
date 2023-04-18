@@ -53,12 +53,15 @@ require('apostrophe')({
     'team-member': {},
 
     // Widgets
+    'accordion-widget': {},
     'call-to-action-widget': {},
     'columns-widget': {},
     'contact-form-widget': {},
     'image-gallery-widget': {},
     'menu-item-widget': {},
+    'pricing-widget': {},
     'side-by-side-widget': {},
+    'sign-up-form-widget': {},
     'team-member-widget': {}
   }
 });
