@@ -26,6 +26,12 @@ require('apostrophe')({
         className: 'bp-video-widget'
       }
     },
+    '@apostrophecms/db': {
+      options: {
+        uri: process.env.APOS_MONGODB_URI,
+        connect: { useUnifiedTopology: true }
+      }
+    },
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.
