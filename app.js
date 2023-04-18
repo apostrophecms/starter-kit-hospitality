@@ -30,7 +30,11 @@ require('apostrophe')({
     },
 
     // The main form module
-    '@apostrophecms/form': {},
+    '@apostrophecms/form': {
+      options: {
+        shortcut: 'a,f'
+      }
+    },
     // The form widget module, allowing editors to add forms to content areas
     '@apostrophecms/form-widget': {},
     // Form field widgets, used by the main form module to build forms.
