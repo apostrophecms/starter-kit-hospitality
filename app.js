@@ -28,12 +28,44 @@ require('apostrophe')({
         className: 'bp-video-widget'
       }
     },
+
+    // The main form module
+    '@apostrophecms/form': {
+      options: {
+        shortcut: 'a,f'
+      }
+    },
+    // The form widget module, allowing editors to add forms to content areas
+    '@apostrophecms/form-widget': {},
+    // Form field widgets, used by the main form module to build forms.
+    '@apostrophecms/form-text-field-widget': {},
+    '@apostrophecms/form-textarea-field-widget': {},
+    '@apostrophecms/form-select-field-widget': {},
+    '@apostrophecms/form-radio-field-widget': {},
+    '@apostrophecms/form-file-field-widget': {},
+    '@apostrophecms/form-checkboxes-field-widget': {},
+    '@apostrophecms/form-boolean-field-widget': {},
+    '@apostrophecms/form-conditional-widget': {},
+
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.
     'default-page': {},
 
+    // Pieces
+    'menu-item': {},
+    'team-member': {},
+
     // Widgets
-    'columns-widget': {}
+    'accordion-widget': {},
+    'call-to-action-widget': {},
+    'columns-widget': {},
+    'contact-form-widget': {},
+    'image-gallery-widget': {},
+    'menu-item-widget': {},
+    'pricing-widget': {},
+    'side-by-side-widget': {},
+    'sign-up-form-widget': {},
+    'team-member-widget': {}
   }
 });

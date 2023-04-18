@@ -1,4 +1,9 @@
+@use "sass:math";
+
+@import "../../../asset/ui/src/scss/variables";
+
 .widget-columns {
+  color: $primary;
   display: flex;
   justify-content: space-between;
   &--narrow {

@@ -8,7 +8,21 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            columns: {}
+            // Hospitality + Marketing widgets
+            columns: {},
+            'call-to-action': {},
+            'image-gallery': {},
+            'menu-item': {},
+            'side-by-side': {},
+            'contact-form': {},
+            '@apostrophecms/rich-text': {},
+            '@apostrophecms/image': {},
+
+            // Marketing widgets
+            accordion: {},
+            pricing: {},
+            'sign-up-form': {},
+            'team-member': {}
           }
         }
       }
