@@ -8,7 +8,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-<<<<<<< HEAD
+            // Hospitality + Marketing widgets
             columns: {},
             'call-to-action': {},
             'image-gallery': {},
@@ -16,10 +16,10 @@ module.exports = {
             'side-by-side': {},
             'contact-form': {},
             '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {}
-=======
-            columns: {}
->>>>>>> e6c0c6f6bc455bc98c75a0aa65602e61711a1420
+            '@apostrophecms/image': {},
+
+            // Marketing widgets
+            'team-member': {}
           }
         }
       }
