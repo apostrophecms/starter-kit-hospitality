@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
-    "build": "NODE_ENV=production node app @apostrophecms/asset:build",
+    "build": "bash ./scripts/heroku-release-tasks",
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
   },
@@ -40,7 +40,9 @@
   "author": "Alt Studios",
   "license": "MIT",
   "dependencies": {
+    "@apostrophecms/form": "^1.1.1",
     "apostrophe": "^3.0.0",
+    "dotenv": "^16.0.3",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

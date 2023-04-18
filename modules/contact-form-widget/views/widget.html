@@ -1,0 +1,9 @@
+<h2>Contact Form widget</h2>
+<div class="widget widget-columns {{ 'widget-columns--narrow' if data.widget.style === 'narrow'}} widget-columns--{{ data.widget.cols }}">
+  <div class="widget-columns__column">
+    {% area data.widget, 'contactForm' %}
+  </div>
+  <div class="widget-columns__column">
+    {{ data.widget._image | dump }}
+  </div>
+</div>
