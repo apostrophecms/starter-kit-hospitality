@@ -1,12 +1,14 @@
-<div>
-  <h2>Menu item widget</h2>
-  
+<h2>Menu item widget</h2>
+<div class="menu">
+  <h2 class="menu__heading">{{ data.widget.heading }}</h2>
+
+  <div class="menu-list {{ 'menu-list--split' if data.widget.style === 'split'}}">
     {% for item in data.widget._menuItems %}
-      <div>
-        <div>{{ item.title }} &ndash; ${{ item.price }}</div>
-        <div>{{ item.description }}</div>
-        <br/>
+      <div class="menu-item {{ 'menu-item--split' if data.widget.style === 'split'}}">
+        <div class="menu-item__title">{{ item.title }} <span>{{ data.widget.currencySybmol }}{{ item.price }}</span></div>
+        <div class="menu-item__description">{{ item.description }}</div>
       </div>
     {% endfor %}
-  
+  </div>
+
 </div>

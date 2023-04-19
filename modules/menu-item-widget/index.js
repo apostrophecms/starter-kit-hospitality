@@ -16,15 +16,20 @@ module.exports = {
         required: true,
         choices: [
           {
-            label: 'Full width',
+            label: 'Full',
             value: 'full',
             def: true
           },
           {
-            label: 'Narrow width (60% of the max width, centered)',
-            value: 'narrow'
+            label: 'Split',
+            value: 'split'
           }
         ]
+      },
+      currencySybmol: {
+        type: 'string',
+        label: 'Currency Symbol',
+        max: 1
       },
       _menuItems: {
         label: 'Menu',
