@@ -1,0 +1,44 @@
+.btn {
+  padding: 16px 32px;
+  width: 100%;
+  max-width: 240px;
+  display: inline-block;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 250ms ease 0s;
+  text-transform: uppercase;
+  &:hover {
+    background-color: bisque;
+  }
+}
+
+.btn--sm {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.btn--lg {
+  padding: 20px 40px;
+  font-size: 24px;
+}
+
+.btn--primary {
+  border: 1px solid $primary;
+  color: $primary;
+  &:hover {
+    color: $secondary;
+    background: $primary;
+  }
+}
+
+.btn--secondary {
+  border: 1px solid $secondary;
+  color: $secondary;
+  &:hover {
+    color: $primary;
+    background: $secondary;
+  }
+}

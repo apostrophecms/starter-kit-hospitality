@@ -1,0 +1,25 @@
+{% import "link.html" as link %}
+{% set widget = data.widget %}
+{% set path = apos.helper.linkPath(widget) %}
+{% set class = '' %}
+{% if widget.block %}
+  {% set class = class + ' btn-widget--block-' + widget.block %}
+{% endif %}
+{% if widget.alignment %}
+  {% set class = class + ' btn-widget--alignment-' + widget.alignment %}
+{% endif %}
+
+<div class="widget btn-widget {{ class }}" id="{{ widget._id }}">
+  {{ link.render({
+    label: widget.linkText,
+    path: path,
+    target: widget.linkTarget,
+    class: 'btn'
+  })}}
+</div>
+
+<style>
+  #{{ widget._id }} .btn:hover{
+    background-color: {{ widget.color }}
+  }
+</style>

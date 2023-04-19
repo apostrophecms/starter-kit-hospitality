@@ -5,3 +5,20 @@
 @import "./scss/_variables";
 @import "./scss/_functions";
 @import "./scss/_mixins";
+
+body {
+  width: 100%;
+  color: $primary;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./scss/_buttons";

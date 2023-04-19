@@ -42,10 +42,12 @@ module.exports = {
               }
             },
             buttons: {
-              type: 'array',
-              max: 2,
-              fields: {
-                add: linkSchema
+              type: 'area',
+              label: 'Buttons',
+              options: {
+                widgets: {
+                  button: {}
+                }
               }
             }
           }

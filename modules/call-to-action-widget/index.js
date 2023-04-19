@@ -20,13 +20,34 @@ module.exports = {
           },
           {
             label: 'Large Marquee',
-            value: 'marquee'
+            value: 'large-marquee'
+          }
+        ]
+      },
+      contentAlignment: {
+        type: 'select',
+        label: 'Content alignment',
+        required: true,
+        choices: [
+          {
+            label: 'Left',
+            value: 'left',
+            def: true
+          },
+          {
+            label: 'Centered',
+            value: 'centered'
+          },
+          {
+            label: 'Right',
+            value: 'right'
           }
         ]
       },
       featureImage: {
         type: 'area',
         label: 'Feature Image',
+        required: true,
         options: {
           max: 1,
           widgets: {
@@ -37,18 +58,12 @@ module.exports = {
       content: {
         type: 'area',
         label: 'Content',
+        required: true,
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {}
+            '@apostrophecms/rich-text': {},
+            'button-strip': {}
           }
-        }
-      },
-      buttons: {
-        type: 'array',
-        label: 'Buttons',
-        max: 2,
-        fields: {
-          add: linkSchema
         }
       }
     }
