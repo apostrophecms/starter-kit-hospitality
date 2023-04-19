@@ -1,4 +1,31 @@
 <div>
   <h2>Image Gallery widget</h2>
-  {{ data.widget | dump }}
+
+  <div class="swiper mySwiper" id="imageGallery" data-image-gallery data-slides="{{ data.widget.displayType}}">
+    <ul class="swiper-wrapper" itemscope itemtype="http://schema.org/ImageGallery">
+      {% for image in data.widget._images %}
+        {% set background = apos.image.first(image) %}
+
+        <li id="{{ image._id }}" class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a
+            itemprop="contentUrl"
+            href="{{ apos.attachment.url(background, {size: 'max' }) }}"
+            data-pswp-width="1600"
+            data-pswp-height="900"
+            target="_blank"
+          >
+            <img
+              src="{{ apos.attachment.url(background, {size: 'full' }) }}"
+              alt="{{ background.title }}"
+              itemprop="thumbnail"
+            />
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
 </div>
