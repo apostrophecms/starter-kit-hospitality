@@ -35,7 +35,7 @@ export default () => {
         tapAction: 'next',
 
         /* ## Hiding a specific UI element ## */
-        // zoom: false,
+        zoom: false,
         close: true,
         counter: true,
         arrowKeys: true
