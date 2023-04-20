@@ -1,1 +1,43 @@
 @import "../../../asset/ui/src/scss/variables";
+
+.accordion-item {
+  border-top: 1px solid grey;
+  &:last-child {
+    border-bottom: 1px solid grey;
+  }
+}
+.accordion-item {
+  border-top: 1px solid grey;
+  &:last-child {
+    border-bottom: 1px solid grey;
+  }
+}
+.accordion-heading {
+  margin: 0;
+}
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  &:focus-visible {
+    outline: none;
+  }
+  [aria-expanded="false"] &__icon:after {
+    content: "\002B";
+  }
+  [aria-expanded="true"] &__icon:after {
+    content: "\2212";
+  }
+}
+.accordion-button,
+.accordion-content {
+  padding: 20px;
+}
