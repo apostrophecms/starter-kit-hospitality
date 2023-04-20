@@ -9,6 +9,7 @@ module.exports = {
       style: {
         type: 'select',
         label: 'Layout style',
+        required: true,
         choices: [
           {
             label: 'Three Column',
@@ -28,7 +29,7 @@ module.exports = {
         builders: {
           project: {
             name: 1,
-            _profileImage: 1,
+            profileImage: 1,
             workTitle: 1
           }
         }

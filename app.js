@@ -20,7 +20,7 @@ require('apostrophe')({
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget'
+        className: 'bp-image-widget img-fluid'
       }
     },
     '@apostrophecms/video-widget': {
