@@ -1,24 +1,7 @@
-{% import "link.html" as link %}
-<div style="display: flex; flex-wrap: wrap;">
+{% import "button.html" as buttonFrag %}
+
+<div class="button-strip">
   {% for button in data.widget.buttons %}
-    {% set widget = button %}
-    {% set path = apos.helper.linkPath(widget) %}
-    {% set class = '' %}
-    {# {% if widget.block %}
-      {% set class = class + ' btn-widget--block-' + widget.block %}
-    {% endif %} #}
-    {# {% if widget.alignment %}
-      {% set class = class + ' btn-widget--alignment-' + widget.alignment %}
-    {% endif %} #}
-
-
-    <div class="widget btn-widget {{ class }}" id="{{ widget._id }}">
-      {{ link.render({
-        label: widget.linkText,
-        path: path,
-        target: widget.linkTarget,
-        class: 'btn btn--' + button.style + ' btn--' + button.size
-      })}}
-    </div>
+    {% render buttonFrag.render(button) %}
   {% endfor %}
 </div>
