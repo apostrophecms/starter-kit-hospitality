@@ -1,4 +1,6 @@
 export default () => {
   // Your own project level JS may go here
-  console.log('Hello World');
+  document.querySelector('.navigation__menu-btn').addEventListener('click', function() {
+    console.log('Hello World');
+  });
 };

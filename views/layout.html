@@ -1,4 +1,8 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
+
+{% import 'fragments/navigation.html' as navigation %}
+{% import 'fragments/footer.html' as footer %}
+
 {% extends data.outerLayout %}
 
 {% set title = data.piece.title or data.page.title %}
@@ -10,7 +14,7 @@
 {% endblock %}
 
 {% block beforeMain %}
-
+    {% render navigation.navbar(data) %}
 {% endblock %}
 
 {% block main %}
@@ -22,5 +26,5 @@
 {% endblock %}
 
 {% block afterMain %}
-
+    {% render footer.footer(data) %}
 {% endblock %}
