@@ -5,6 +5,19 @@ module.exports = {
   },
   fields: {
     add: {
+      layout: {
+        type: 'select',
+        choices: [
+          {
+            label: 'Background',
+            value: 'background'
+          },
+          {
+            label: 'Two Column',
+            value: 'column'
+          }
+        ]
+      },
       backgroundStyle: {
         type: 'select',
         label: 'Background Style',
@@ -19,17 +32,30 @@ module.exports = {
             label: 'Color',
             value: 'color'
           }
-        ]
+        ],
+        if: {
+          layout: 'background'
+        }
       },
       _backgroundImage: {
         type: 'relationship',
         withType: '@apostrophecms/image',
         label: 'Select a background image',
-        max: 1
+        max: 1,
+        if: {
+          $or: [
+            { backgroundStyle: 'image' },
+            { layout: 'column' }
+          ]
+
+        }
       },
-      colorPicker: {
-        type: 'string',
-        label: 'Pick a background color'
+      backgroundColor: {
+        type: 'color',
+        label: 'Pick a background color',
+        if: {
+          backgroundStyle: 'color'
+        }
       },
       content: {
         type: 'area',

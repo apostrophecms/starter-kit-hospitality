@@ -2,8 +2,6 @@ module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
     label: 'Menu Item'
-    // Additionally add a `pluralLabel` option if needed.
-    // pluralLabel: 'Menu Items'
   },
   fields: {
     add: {
@@ -22,7 +20,6 @@ module.exports = {
         def: 0.00,
         required: true
       }
-    },
-    group: {}
+    }
   }
 };

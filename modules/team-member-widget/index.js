@@ -28,6 +28,7 @@ module.exports = {
         required: true,
         builders: {
           project: {
+            type: 'team-member',
             name: 1,
             profileImage: 1,
             workTitle: 1

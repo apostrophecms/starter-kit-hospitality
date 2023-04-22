@@ -37,6 +37,7 @@ module.exports = {
         withType: 'menu-item',
         builders: {
           project: {
+            type: 'menu-item',
             title: 1,
             description: 1,
             price: 1
