@@ -1,0 +1,15 @@
+{% set attachment = apos.image.first(data.widget._image) %}
+
+{% if attachment %}
+  <img srcset="{{ apos.image.srcset(attachment) }}"
+    src="{{ apos.attachment.url(attachment, { size: data.options.size or 'full' }) }}"
+    alt="{{ attachment._alt or '' }}"
+    width="{{ apos.attachment.getWidth(attachment) }}"
+    height="{{ apos.attachment.getHeight(attachment) }}"
+    {% if apos.attachment.hasFocalPoint(attachment) %}
+      style="object-position: {{ apos.attachment.focalPointToObjectPosition(attachment) }}"
+    {%- endif -%}
+  />
+{% endif %}
+
+{% marco image  %}

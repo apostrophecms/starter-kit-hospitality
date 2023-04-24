@@ -21,3 +21,7 @@ This boilerplate is designed so you can install and start running it right away.
 
 Right now, [all the juicy info is in the A3 docs](https://a3.docs.apostrophecms.org), so head over there and start reading! This boilerplate project is a fun introduction to the UI, but you'll want to know more to really try it out.
 
+## Create Admin user
+node app @apostrophecms/user:add admin admin
+
+
