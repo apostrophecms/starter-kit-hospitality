@@ -1,7 +1,9 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Team Member'
+    label: 'Team Member',
+    openGraph: false,
+    seoFields: false
   },
   fields: {
     add: {

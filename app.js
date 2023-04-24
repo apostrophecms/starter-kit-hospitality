@@ -47,6 +47,15 @@ require('apostrophe')({
     '@apostrophecms/form-boolean-field-widget': {},
     '@apostrophecms/form-conditional-widget': {},
 
+    '@apostrophecms/sitemap': {
+      options: {
+        baseUrl: 'http://localhost:3000',
+        excludeTypes: ['team-member', 'menu-item']
+      }
+    },
+    '@apostrophecms/seo': {},
+    '@apostrophecms/open-graph': {},
+
     // `asset` supports the project's webpack build for client-side assets.
     helper: {},
     asset: {},
