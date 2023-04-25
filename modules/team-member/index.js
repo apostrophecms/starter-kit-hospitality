@@ -1,7 +1,9 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Team Member'
+    label: 'Team Member',
+    openGraph: false,
+    seoFields: false
   },
   fields: {
     add: {
@@ -10,12 +12,15 @@ module.exports = {
         label: 'Name',
         required: true
       },
-      _profileImage: {
-        type: 'relationship',
-        withType: '@apostrophecms/image',
+      profileImage: {
         label: 'Profile Image',
-        required: true,
-        max: 1
+        type: 'area',
+        options: {
+          max: 1,
+          widgets: {
+            '@apostrophecms/image': {}
+          }
+        }
       },
       workTitle: {
         type: 'string',

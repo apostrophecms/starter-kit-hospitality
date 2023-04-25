@@ -20,7 +20,7 @@ require('apostrophe')({
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget'
+        className: 'bp-image-widget img-fluid'
       }
     },
     '@apostrophecms/video-widget': {
@@ -47,7 +47,17 @@ require('apostrophe')({
     '@apostrophecms/form-boolean-field-widget': {},
     '@apostrophecms/form-conditional-widget': {},
 
+    '@apostrophecms/sitemap': {
+      options: {
+        baseUrl: 'http://localhost:3000',
+        excludeTypes: ['team-member', 'menu-item']
+      }
+    },
+    '@apostrophecms/seo': {},
+    '@apostrophecms/open-graph': {},
+
     // `asset` supports the project's webpack build for client-side assets.
+    helper: {},
     asset: {},
     // The project's first custom page type.
     'default-page': {},
@@ -58,6 +68,8 @@ require('apostrophe')({
 
     // Widgets
     'accordion-widget': {},
+    'button-widget': {},
+    'button-strip-widget': {},
     'call-to-action-widget': {},
     'columns-widget': {},
     'contact-form-widget': {},

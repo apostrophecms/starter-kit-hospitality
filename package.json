@@ -41,9 +41,14 @@
   "license": "MIT",
   "dependencies": {
     "@apostrophecms/form": "^1.1.1",
+    "@apostrophecms/open-graph": "^1.2.1",
+    "@apostrophecms/seo": "^1.2.0",
+    "@apostrophecms/sitemap": "^1.0.2",
     "apostrophe": "^3.0.0",
     "dotenv": "^16.0.3",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "photoswipe": "^5.3.7",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
     "eslint": "^7.16.0",

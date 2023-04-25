@@ -6,23 +6,23 @@ module.exports = {
   },
   fields: {
     add: {
-      style: {
+      displayType: {
         type: 'select',
-        label: 'Layout style',
+        label: 'Display type',
         required: true,
         choices: [
           {
-            label: 'Large',
-            value: 'large',
+            label: 'Large, single image',
+            value: 1,
             def: true
           },
           {
             label: 'Three Columns',
-            value: 'three-col'
+            value: 3
           },
           {
             label: 'Four Columns',
-            value: 'four-col'
+            value: 4
           }
         ]
       },

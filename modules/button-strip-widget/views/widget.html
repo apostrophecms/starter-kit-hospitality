@@ -1,0 +1,7 @@
+{% import "button.html" as buttonFrag %}
+
+<div class="button-strip">
+  {% for button in data.widget.buttons %}
+    {% render buttonFrag.render(button) %}
+  {% endfor %}
+</div>

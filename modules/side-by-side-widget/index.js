@@ -8,7 +8,7 @@ module.exports = {
   },
   fields: {
     add: {
-      style: {
+      invert: {
         type: 'boolean',
         label: 'Invert columns',
         required: true,

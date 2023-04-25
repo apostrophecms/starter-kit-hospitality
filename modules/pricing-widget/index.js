@@ -8,16 +8,20 @@ module.exports = {
   },
   fields: {
     add: {
+      title: {
+        type: 'string',
+        label: 'Title'
+      },
       cards: {
         type: 'array',
         label: 'Cards',
-        titleField: 'title',
+        titleField: 'label',
         max: 4,
         fields: {
           add: {
-            title: {
+            label: {
               type: 'string',
-              label: 'Title'
+              label: 'Label'
             },
             content: {
               type: 'area',
@@ -42,10 +46,13 @@ module.exports = {
               }
             },
             buttons: {
-              type: 'array',
-              max: 2,
-              fields: {
-                add: linkSchema
+              type: 'area',
+              label: 'Buttons',
+              options: {
+                max: 2,
+                widgets: {
+                  button: {}
+                }
               }
             }
           }
