@@ -30,21 +30,21 @@ module.exports = {
         required: true,
         choices: [
           {
-            label: 'Single column, 50%',
-            value: 'single-50',
+            label: 'Single column',
+            value: 'single',
             def: true
           },
           {
             label: '50% / 50%',
-            value: '50-50'
+            value: 'double'
           },
           {
             label: '33% / 33% / 33%',
-            value: '33-33-33'
+            value: 'triple'
           },
           {
             label: '25% / 25% / 25% / 25%',
-            value: '25-25-25-25'
+            value: 'quadruple'
           }
         ]
       },
@@ -63,9 +63,9 @@ module.exports = {
         },
         if: {
           $or: [
-            { cols: '25-25-25-25' },
-            { cols: '33-33-33' },
-            { cols: '50-50' }
+            { cols: 'double' },
+            { cols: 'triple' },
+            { cols: 'quadruple' }
           ]
         }
       },
@@ -74,8 +74,8 @@ module.exports = {
         contextual: true,
         if: {
           $or: [
-            { cols: '25-25-25-25' },
-            { cols: '33-33-33' }
+            { cols: 'quadruple' },
+            { cols: 'triple' }
           ]
         },
         options: {
@@ -86,7 +86,7 @@ module.exports = {
         type: 'area',
         contextual: true,
         if: {
-          cols: '25-25-25-25'
+          cols: 'quadruple'
         },
         options: {
           widgets: areaConfig

@@ -1,6 +1,10 @@
 @import "../../../../asset/ui/src/scss/variables";
 
 .side-by-side {
+  display: flex;
+  &__column-item {
+    width: 50%;
+  }
   .invert {
     order: 1;
   }
