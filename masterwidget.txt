@@ -6,10 +6,10 @@ Master widget approach:
   - Include a reference to the widget within the modules section of apostrophecms main app.js
   - The widget scss approach: The scss file should be located within the module folder /modules/my-model/ui/src/index.scss. This file can contain references to
 
-  @import "../../../asset/ui/src/scss/variables";
-  @import "../../../asset/ui/src/scss/functions";
+  @import "../../../../asset/ui/src/scss/variables";
+  @import "../../../../asset/ui/src/scss/functions";
 
-  @import "../../../asset/ui/src/scss/mixins";
+  @import "../../../../asset/ui/src/scss/mixins";
 
   if needed. These imports contain the variables, functions and mixins used for the theme.
   

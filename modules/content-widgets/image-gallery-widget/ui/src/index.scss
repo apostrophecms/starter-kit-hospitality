@@ -1,0 +1,25 @@
+@import "../../../../asset/ui/src/scss/variables";
+@import "swiper/swiper-bundle.css";
+@import "photoswipe/photoswipe.css";
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  padding: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
