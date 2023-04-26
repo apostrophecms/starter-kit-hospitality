@@ -7,9 +7,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  &:not(:first-child) {
-    margin-top: 20px;
-  }
 
   &--alignment-left {
     justify-content: flex-start;
@@ -20,14 +17,19 @@
   &--alignment-right {
     justify-content: flex-end;
   }
+
   &--block-true .btn {
     display: block;
     width: 100%;
   }
 
+  & + .btn-widget {
+    margin-top: 20px;
+  }
+
   @media only screen and (min-width: 600px) {
     width: auto;
-    &:not(:first-child) {
+    & + .btn-widget {
       margin-top: 0;
       margin-left: 20px;
     }

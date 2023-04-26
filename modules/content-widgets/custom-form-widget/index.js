@@ -1,7 +1,7 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Sign Up Form'
+    label: 'Custom Form'
   },
   fields: {
     add: {
@@ -67,7 +67,7 @@ module.exports = {
           }
         }
       },
-      signUpForm: {
+      form: {
         type: 'area',
         options: {
           max: 1,
