@@ -23,9 +23,6 @@ export default () => {
           // Convert the latitude and longitude to the map's projection
           const coords = fromLonLat([longitude, latitude]);
 
-
-          console.log('zoom level: ', el.dataset.mapzoomlevel);
-
           const map = new Map({
             layers: [
               new TileLayer({
