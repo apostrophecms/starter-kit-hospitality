@@ -29,7 +29,7 @@ export default () => {
           showHideOpacity: true,
           children: 'a',
           loop: true,
-          showHideAnimationType: 'zoom', /* options: fade, zoom, none */
+          showHideAnimationType: 'fade', /* options: fade, zoom, none */
 
           /* Click on image moves to the next slide */
           imageClickAction: 'next',

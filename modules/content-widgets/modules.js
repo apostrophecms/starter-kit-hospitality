@@ -7,6 +7,7 @@ module.exports = {
   'columns-widget': {},
   'custom-form-widget': {},
   'image-gallery-widget': {},
+  'map-widget': {},
   'pricing-widget': {},
   'side-by-side-widget': {}
 };

@@ -18,6 +18,7 @@ module.exports = {
             'side-by-side': {},
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {},
+            map: {},
 
             // Marketing widgets
             accordion: {},

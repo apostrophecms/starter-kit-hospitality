@@ -4,7 +4,7 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Accordion Widget',
-    icon: 'user-icon'
+    // icon: 'user-icon'
   },
   fields: {
     add: {
