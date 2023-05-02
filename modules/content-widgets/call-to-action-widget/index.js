@@ -47,7 +47,7 @@ module.exports = {
       },
       featureImage: {
         type: 'area',
-        label: 'Feature Image',
+        label: 'Feature image',
         required: true,
         options: {
           max: 1,

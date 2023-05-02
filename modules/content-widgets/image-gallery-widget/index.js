@@ -11,20 +11,20 @@ module.exports = {
     add: {
       displayType: {
         type: 'select',
-        label: 'Display type',
+        label: 'Slide display type',
         required: true,
         choices: [
           {
-            label: 'Large, single image',
+            label: 'Large, single slide',
             value: 1,
             def: true
           },
           {
-            label: 'Three Columns',
+            label: 'Three slides',
             value: 3
           },
           {
-            label: 'Four Columns',
+            label: 'Four slides',
             value: 4
           }
         ]
