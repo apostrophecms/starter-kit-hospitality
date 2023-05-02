@@ -1,0 +1,15 @@
+<h2>Accordion widget</h2>
+<section data-accordion class="accordion">
+  {% for item in data.widget.accordions %}
+    <div class="accordion-item">
+      <h2 class="accordion-heading">
+        <button class="accordion-button" data-accordion-button aria-expanded="false">
+          {{ item.title }} <span class="accordion-button__icon"></span>
+        </button>
+      </h2>
+      <div class="accordion-content" hidden data-accordion-detail>
+        {% area item, 'content' %}
+      </div>
+    </div>
+  {% endfor %}
+</section>

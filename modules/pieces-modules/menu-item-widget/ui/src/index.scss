@@ -1,0 +1,28 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.menu {
+  &__heading {
+    text-align: center;
+  }
+}
+
+.menu-list {
+  &--split {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  &--split {
+    flex-basis: 50%;
+    &:nth-child(even) {
+      padding-left: 20px;
+    }
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+}

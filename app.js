@@ -2,6 +2,8 @@ require('dotenv').config();
 
 require('apostrophe')({
   shortName: 'apos-theme',
+  baseUrl: process.env.APOS_BASE_URL || 'http://localhost:3000',
+  nestedModuleSubdirs: true,
   modules: {
     // Apostrophe module configuration
     // *******************************
@@ -20,7 +22,7 @@ require('apostrophe')({
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget'
+        className: 'bp-image-widget img-fluid'
       }
     },
     '@apostrophecms/video-widget': {
@@ -47,25 +49,19 @@ require('apostrophe')({
     '@apostrophecms/form-boolean-field-widget': {},
     '@apostrophecms/form-conditional-widget': {},
 
+    '@apostrophecms/sitemap': {
+      options: {
+        excludeTypes: ['team-member', 'menu-item']
+      }
+    },
+    '@apostrophecms/seo': {},
+    '@apostrophecms/open-graph': {},
+
     // `asset` supports the project's webpack build for client-side assets.
+    helper: {},
     asset: {},
+
     // The project's first custom page type.
-    'default-page': {},
-
-    // Pieces
-    'menu-item': {},
-    'team-member': {},
-
-    // Widgets
-    'accordion-widget': {},
-    'call-to-action-widget': {},
-    'columns-widget': {},
-    'contact-form-widget': {},
-    'image-gallery-widget': {},
-    'menu-item-widget': {},
-    'pricing-widget': {},
-    'side-by-side-widget': {},
-    'sign-up-form-widget': {},
-    'team-member-widget': {}
+    'default-page': {}
   }
 });

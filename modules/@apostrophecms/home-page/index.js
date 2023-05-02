@@ -8,20 +8,21 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
+            // Forms
             // Hospitality + Marketing widgets
             columns: {},
             'call-to-action': {},
+            'custom-form': {},
             'image-gallery': {},
             'menu-item': {},
             'side-by-side': {},
-            'contact-form': {},
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {},
+            map: {},
 
             // Marketing widgets
             accordion: {},
             pricing: {},
-            'sign-up-form': {},
             'team-member': {}
           }
         }

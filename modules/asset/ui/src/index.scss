@@ -5,9 +5,29 @@
 @import "./scss/_variables";
 @import "./scss/_functions";
 @import "./scss/_mixins";
-
 // Navigation styles
 @import "./scss/navigation";
-
 // Footer styles
 @import "./scss/footer";
+
+body {
+  width: 100%;
+  color: $primary;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@import "./scss/_buttons";

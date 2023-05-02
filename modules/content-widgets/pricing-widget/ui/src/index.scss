@@ -1,0 +1,43 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.pricing {
+  padding: 20px;
+  background: #eee;
+  &__title {
+    text-align: center;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card {
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    background: white;
+    &:nth-child(even) {
+      background: #eee;
+      border: 1px solid darken(#eee, 10%);
+    }
+
+    &__label {
+      color: lightblue;
+      text-transform: uppercase;
+    }
+    &__feature-list {
+      padding-left: 0;
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+        display: flex;
+      }
+      li:before {
+        margin-right: 10px;
+        color: lightblue;
+        content: "\2713";
+      }
+    }
+  }
+}

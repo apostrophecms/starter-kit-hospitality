@@ -4,7 +4,15 @@ Master widget approach:
   - Set up of widget through cli: apos add widget two-column
   - First create the module configuration file (/modules/my-component-widget/index.js), extend the core widget type module, and add a widget label for editors. Include the widget type's field schemas needed
   - Include a reference to the widget within the modules section of apostrophecms main app.js
-  - The scss file should be located within the module folder /modules/my-model/ui/src/index.scss. This file should contain a @import    "../../../asset/ui/src/scss/variables"; to the settings.scss file which contains the scss variables/mixins/functions defined for the theme
+  - The widget scss approach: The scss file should be located within the module folder /modules/my-model/ui/src/index.scss. This file can contain references to
+
+  @import "../../../../asset/ui/src/scss/variables";
+  @import "../../../../asset/ui/src/scss/functions";
+
+  @import "../../../../asset/ui/src/scss/mixins";
+
+  if needed. These imports contain the variables, functions and mixins used for the theme.
+  
   - Client-side JavaScript for widgets should be tied to the widget module and thus located within /modules/my-component-widget/ui/src/index.js
   - Naming for widget to match it's parent name, i.e. apos.util.widgetPlayers.my-component / selector: '[data-my-component]', no need to include -widget in these cases
   - lib/area.js - to include base apostrophecms widgets, being apostrophecms/rich-text, apostrophecms/video and apostrophecms/image, no html one as this is a security concern. Then extra objects for full widget list?, as well as custom widget lists. Rich text to have basic tools and full tools options
