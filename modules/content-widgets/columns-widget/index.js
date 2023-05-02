@@ -96,8 +96,5 @@ module.exports = {
         }
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };

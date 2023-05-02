@@ -13,7 +13,7 @@ module.exports = {
         required: true
       },
       profileImage: {
-        label: 'Profile Image',
+        label: 'Profile image',
         type: 'area',
         options: {
           max: 1,
@@ -24,7 +24,7 @@ module.exports = {
       },
       workTitle: {
         type: 'string',
-        label: 'Work Title'
+        label: 'Work title'
       }
     },
     group: {}

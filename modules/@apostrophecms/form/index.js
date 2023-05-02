@@ -7,13 +7,19 @@ module.exports = {
         def: false
       },
       emailSubscriptionField: {
-        label: 'aposForm:confEmailField',
+        label: 'Which is your subscription email field?',
         help: 'aposForm:confEmailFieldHelp',
         type: 'string',
         required: true,
         if: {
           subscription: true
         }
+      }
+    },
+    group: {
+      subscription: {
+        label: 'Enable Subscriptions',
+        fields: ['subscription', 'emailSubscriptionField']
       }
     }
   },

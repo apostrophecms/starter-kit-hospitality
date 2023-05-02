@@ -23,7 +23,7 @@ module.exports = {
       },
       mapZoomLevel: {
         type: 'integer',
-        label: 'Map Zoom Level',
+        label: 'Map zoom level',
         min: 1,
         max: 14,
         def: 9

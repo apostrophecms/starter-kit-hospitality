@@ -31,7 +31,7 @@ module.exports = {
       },
       currencySybmol: {
         type: 'string',
-        label: 'Currency Symbol',
+        label: 'Currency symbol',
         max: 1
       },
       _menuItems: {
