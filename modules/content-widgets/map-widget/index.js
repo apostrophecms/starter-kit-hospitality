@@ -3,8 +3,11 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Map'
-    // icon: 'map-icon'
+    label: 'Map',
+    icon: 'map-icon'
+  },
+  icons: {
+    'map-icon': 'Map'
   },
   fields: {
     add: {

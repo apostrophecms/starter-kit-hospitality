@@ -4,7 +4,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Side by side',
-    icon: 'pillar'
+    icon: 'layout-side-icon'
+  },
+  icons: {
+    'layout-side-icon': 'PageLayoutSidebarRight'
   },
   fields: {
     add: {
@@ -29,8 +32,5 @@ module.exports = {
         }
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };

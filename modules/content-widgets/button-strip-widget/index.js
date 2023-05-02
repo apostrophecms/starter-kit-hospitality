@@ -4,7 +4,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Buttons',
-    icon: 'cursor-default-click-icon'
+    icon: 'button-icon'
+  },
+  icons: {
+    'button-icon': 'ShapeRectanglePlus'
   },
   fields: {
     add: {

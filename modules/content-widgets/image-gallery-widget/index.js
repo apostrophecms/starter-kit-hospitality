@@ -2,7 +2,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Image Gallery',
-    icon: 'image-icon'
+    icon: 'image-gallery-icon'
+  },
+  icons: {
+    'image-gallery-icon': 'ImageAlbum'
   },
   fields: {
     add: {
@@ -34,8 +37,5 @@ module.exports = {
         max: 10
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };
