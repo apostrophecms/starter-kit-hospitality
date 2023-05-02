@@ -2,7 +2,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Menu',
-    icon: 'pillar'
+    icon: 'list-icon'
+  },
+  icons: {
+    'list-icon': 'FormatListChecks'
   },
   fields: {
     add: {
@@ -45,8 +48,5 @@ module.exports = {
         }
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };

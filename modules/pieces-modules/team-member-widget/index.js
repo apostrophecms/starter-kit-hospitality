@@ -2,7 +2,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Team Widget',
-    // icon: 'user-icon'
+    icon: 'teams-icon'
+  },
+  icons: {
+    'teams-icon': 'AccountMultiplePlus'
   },
   fields: {
     add: {
