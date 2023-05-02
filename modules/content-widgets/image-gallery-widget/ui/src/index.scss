@@ -1,0 +1,43 @@
+@import "../../../../asset/ui/src/scss/variables";
+@import "swiper/swiper-bundle.css";
+@import "photoswipe/photoswipe.css";
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  padding: 0;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pswp__zoom-wrap {
+  width: 100%;
+  height: 100%;
+}
+.pswp__img--placeholder {
+  display: none;
+}
+.pswp__img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  /* height: auto; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
