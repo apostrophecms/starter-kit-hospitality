@@ -5,6 +5,7 @@
   <img srcset="{{ apos.image.srcset(attachment) }}"
     src="{{ apos.attachment.url(attachment, { size: data.options.size or 'full' }) }}"
     alt="{{ attachment._alt or '' }}"
+    loading="lazy"
     width="{{ apos.attachment.getWidth(attachment) }}"
     height="{{ apos.attachment.getHeight(attachment) }}"
     {% if apos.attachment.hasFocalPoint(attachment) %}
