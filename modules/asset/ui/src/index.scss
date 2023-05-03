@@ -10,6 +10,14 @@
 
 @import "./scss/_typography";
 
+// apos line-height interferance fix
+.apos-area,
+.apos-area-widget-inner,
+.apos-area-widget-wrapper,
+.apos-areas-widgets-list {
+  line-height: unset !important;
+}
+
 *,
 ::after,
 ::before {
@@ -42,6 +50,7 @@ a {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  border-radius: $border-radius;
 }
 
 @import "./scss/_buttons";
