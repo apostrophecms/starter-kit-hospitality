@@ -38,7 +38,7 @@ $box-shadow-lg: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0,
 
 // Theme colour variables
 $primary: $navy;
-$secondary: $jungle-green;
+$secondary: $stone;
 $success: $jungle-green;
 $info: $cyan;
 $warning: $yellow;
@@ -101,3 +101,6 @@ $lead-font-weight: 300;
 $small-font-size: 0.875em;
 
 $border-radius: 5px;
+
+// Easing
+$animate-easing: 250ms ease 0s;

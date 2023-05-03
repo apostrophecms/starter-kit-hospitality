@@ -6,7 +6,7 @@
   color: white;
   text-decoration: none;
   text-align: center;
-  transition: background-color 250ms ease 0s;
+  transition: background-color $animate-easing;
   text-transform: uppercase;
   border-radius: $border-radius;
   &:hover {

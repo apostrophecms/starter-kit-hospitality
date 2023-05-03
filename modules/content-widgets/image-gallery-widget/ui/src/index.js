@@ -15,8 +15,8 @@ export default () => {
           slidesPerView: slides,
           spaceBetween: 30,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.button-arrow--next',
+            prevEl: '.button-arrow--prev'
           }
         });
 

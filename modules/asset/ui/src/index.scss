@@ -9,6 +9,8 @@
 @import "./scss/_mixins";
 
 @import "./scss/_typography";
+@import "./scss/_buttons";
+@import "./scss/_button-arrow";
 
 // apos line-height interferance fix
 .apos-area,
@@ -51,6 +53,5 @@ a {
   max-width: 100%;
   height: auto;
   border-radius: $border-radius;
+  box-shadow: $box-shadow;
 }
-
-@import "./scss/_buttons";
