@@ -1,25 +1,28 @@
 @import "../../../../asset/ui/src/scss/theme";
 
 .team-widget {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  grid-gap: 2rem;
+  justify-content: space-around;
+  padding: initial;
+  @media only screen and (min-width: 900px) {
+    justify-content: center;
+    &--three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &--four-col {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
   &__profile {
     margin-bottom: 20px;
     text-align: center;
-  }
-  &__profile--three-col {
-    flex: 0 0 33.333333%;
-  }
-  &__profile--four-col {
-    flex: 0 0 25%;
   }
   &__profile-image {
     margin: 0 auto;
     max-width: 200px;
     border-radius: 50%;
-  }
-  &__name {
   }
   &__work-title {
     text-transform: uppercase;

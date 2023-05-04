@@ -1,7 +1,7 @@
 <h2>Team widget</h2>
-<section class="team-widget container">
+<section class="team-widget team-widget--{{ data.widget.style }} container">
   {% for member in data.widget._teamMembers %}
-    <div class="team-widget__profile team-widget__profile--{{ data.widget.style }}">
+    <div class="team-widget__profile">
       {% set profileImage = apos.image.first(member.profileImage) %}
       <img class="team-widget__profile-image img-fluid" src="{{ apos.attachment.url(profileImage) }}" alt="{{ profileImage.title }}">
       <h3 class="team-widget__name">{{ member.name }}</h3>
