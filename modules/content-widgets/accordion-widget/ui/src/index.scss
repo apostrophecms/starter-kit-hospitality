@@ -1,43 +1,40 @@
 @import "../../../../asset/ui/src/scss/variables";
 
-.accordion-item {
-  border-top: 1px solid grey;
-  &:last-child {
-    border-bottom: 1px solid grey;
+.accordion {
+  &__item {
+    border-top: 1px solid $primary;
+    &:last-child {
+      border-bottom: 1px solid $primary;
+    }
   }
-}
-.accordion-item {
-  border-top: 1px solid grey;
-  &:last-child {
-    border-bottom: 1px solid grey;
+  &__heading {
+    margin: 0;
   }
-}
-.accordion-heading {
-  margin: 0;
-}
-.accordion-button {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  &:focus-visible {
-    outline: none;
+  &__button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: $primary;
+    text-align: left;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:focus-visible {
+      outline: none;
+    }
+    &[aria-expanded="false"] .accordion__button-icon:after {
+      content: "\002B";
+    }
+    &[aria-expanded="true"] .accordion__button-icon:after {
+      content: "\2212";
+    }
   }
-  [aria-expanded="false"] &__icon:after {
-    content: "\002B";
+  &__button,
+  &__content {
+    padding: 1rem 1.5rem;
   }
-  [aria-expanded="true"] &__icon:after {
-    content: "\2212";
-  }
-}
-.accordion-button,
-.accordion-content {
-  padding: 20px;
 }

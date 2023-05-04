@@ -65,6 +65,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  line-height: $line-height-base;
   &.small {
     font-size: $small-font-size;
   }
