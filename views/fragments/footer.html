@@ -2,7 +2,11 @@
 <div class="footer">
   <div class="footer__main">
     <div class="footer__logo">
-      <img src="https://dummyimage.com/600x250/4682b4/fff&text=Logo" alt=""/>
+      {% set imageObject = apos
+        .attachment
+        .first(data.global.logo) %}
+
+      <img src="{{ apos.attachment.url(imageObject) }}" alt="{{ data.global.title }}"/>
     </div>
 
     <div class="footer__nav-items">
