@@ -1,8 +1,8 @@
 @import "../../../../asset/ui/src/scss/variables";
 
 .pricing {
-  padding: 20px;
-  background: #eee;
+  padding: 2rem;
+  background: $secondary;
   &__title {
     text-align: center;
   }
@@ -10,20 +10,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 2rem;
+    margin-top: 2rem;
   }
   .card {
-    border-radius: 10px;
-    padding: 20px;
-    width: 320px;
-    background: white;
+    border-radius: $border-radius;
+    padding: 2rem;
+    width: 350px;
+    background: $white;
+    color: $primary;
     &:nth-child(even) {
-      background: #eee;
-      border: 1px solid darken(#eee, 10%);
+      background: none;
+      border: 1px solid $sea-green;
+      color: $primary;
+    }
+    &--pricing {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     &__label {
-      color: lightblue;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: $sea-green;
       text-transform: uppercase;
     }
     &__feature-list {
@@ -35,7 +45,8 @@
       }
       li:before {
         margin-right: 10px;
-        color: lightblue;
+        font-weight: 700;
+        color: $sea-green;
         content: "\2713";
       }
     }

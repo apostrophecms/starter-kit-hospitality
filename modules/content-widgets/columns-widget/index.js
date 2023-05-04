@@ -55,14 +55,14 @@ module.exports = {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig
+          widgets: areaConfig.all
         }
       },
       two: {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig
+          widgets: areaConfig.all
         },
         if: {
           $or: [
@@ -82,7 +82,7 @@ module.exports = {
           ]
         },
         options: {
-          widgets: areaConfig
+          widgets: areaConfig.all
         }
       },
       four: {
@@ -92,7 +92,7 @@ module.exports = {
           cols: 'quadruple'
         },
         options: {
-          widgets: areaConfig
+          widgets: areaConfig.all
         }
       }
     }

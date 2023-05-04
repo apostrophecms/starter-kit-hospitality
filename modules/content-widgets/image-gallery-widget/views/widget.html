@@ -1,12 +1,14 @@
-<div>
-  <h2>Image Gallery widget</h2>
+{% import 'button-arrows.html' as buttonArrows %}
+<h2>Image Gallery widget</h2>
 
-  <div class="swiper mySwiper" id="imageGallery" data-image-gallery data-slides="{{ data.widget.displayType}}">
-    <ul class="swiper-wrapper" itemscope itemtype="http://schema.org/ImageGallery">
+<section class="image-gallery">
+
+  <div class="swiper image-gallery__swiper" id="imageGallery" data-image-gallery data-slides="{{ data.widget.displayType}}">
+    <div class="swiper-wrapper" itemscope itemtype="http://schema.org/ImageGallery">
       {% for image in data.widget._images %}
         {% set background = apos.image.first(image) %}
 
-        <li id="{{ image._id }}" class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <div id="{{ image._id }}" class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a
             itemprop="contentUrl"
             href="{{ apos.attachment.url(background, {size: 'max' }) }}"
@@ -18,14 +20,14 @@
               src="{{ apos.attachment.url(background, {size: 'full' }) }}"
               alt="{{ background.title }}"
               itemprop="thumbnail"
+              class="img-fluid"
             />
           </a>
-        </li>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    {% render buttonArrows.swiper() %}
   </div>
 
-</div>
+</section>

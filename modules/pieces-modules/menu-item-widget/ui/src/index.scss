@@ -1,28 +1,23 @@
 @import "../../../../asset/ui/src/scss/variables";
 
 .menu {
-  &__heading {
-    text-align: center;
-  }
-}
-
-.menu-list {
-  &--split {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.menu-item {
-  margin-bottom: 20px;
-  &--split {
-    flex-basis: 50%;
-    &:nth-child(even) {
-      padding-left: 20px;
+  &__list {
+    &.split {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
-  &__title {
-    display: flex;
-    justify-content: space-between;
+  &__item {
+    margin-bottom: 2rem;
+    &.split {
+      flex-basis: 50%;
+      &:nth-child(even) {
+        padding-left: 2rem;
+      }
+    }
+    &__title {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

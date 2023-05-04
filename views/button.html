@@ -10,7 +10,7 @@
     {% set class = class + ' btn-widget--alignment-' + button.alignment %}
   {% endif %}
 
-  <div class="widget btn-widget" id="{{ button._id }}">
+  <div class="btn-widget" id="{{ button._id }}">
     {% render link.render({
       label: button.linkText,
       path: path,

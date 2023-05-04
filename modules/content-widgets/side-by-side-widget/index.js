@@ -21,14 +21,14 @@ module.exports = {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig
+          widgets: areaConfig.all
         }
       },
       two: {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig
+          widgets: areaConfig.all
         }
       }
     }
