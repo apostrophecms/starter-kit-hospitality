@@ -1,8 +1,11 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Team Widget',
-    // icon: 'user-icon'
+    label: 'Team Members',
+    icon: 'teams-icon'
+  },
+  icons: {
+    'teams-icon': 'AccountMultiplePlus'
   },
   fields: {
     add: {
@@ -12,11 +15,11 @@ module.exports = {
         required: true,
         choices: [
           {
-            label: 'Three Column',
+            label: 'Three column',
             value: 'three-col'
           },
           {
-            label: 'Four Column',
+            label: 'Four column',
             value: 'four-col'
           }
         ]

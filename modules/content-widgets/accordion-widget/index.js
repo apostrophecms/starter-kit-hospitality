@@ -3,8 +3,11 @@ const areaConfig = require('../../../lib/area');
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Accordion Widget',
-    // icon: 'user-icon'
+    label: 'Accordion',
+    icon: 'menu-open-icon'
+  },
+  icons: {
+    'menu-open-icon': 'MenuOpen'
   },
   fields: {
     add: {

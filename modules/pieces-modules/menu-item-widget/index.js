@@ -2,7 +2,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Menu',
-    icon: 'pillar'
+    icon: 'list-icon'
+  },
+  icons: {
+    'list-icon': 'FormatListChecks'
   },
   fields: {
     add: {
@@ -28,7 +31,7 @@ module.exports = {
       },
       currencySybmol: {
         type: 'string',
-        label: 'Currency Symbol',
+        label: 'Currency symbol',
         max: 1
       },
       _menuItems: {
@@ -45,8 +48,5 @@ module.exports = {
         }
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };

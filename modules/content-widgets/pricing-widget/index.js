@@ -1,8 +1,11 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Pricing Widget',
-    // icon: 'user-icon'
+    label: 'Pricing',
+    icon: 'cards-icon'
+  },
+  icons: {
+    'cards-icon': 'Cards'
   },
   fields: {
     add: {
@@ -32,7 +35,7 @@ module.exports = {
             },
             features: {
               type: 'array',
-              label: 'Features List',
+              label: 'Features list',
               titleField: 'title',
               fields: {
                 add: {

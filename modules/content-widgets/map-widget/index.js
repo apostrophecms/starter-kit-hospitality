@@ -3,8 +3,11 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Map'
-    // icon: 'map-icon'
+    label: 'Map',
+    icon: 'map-icon'
+  },
+  icons: {
+    'map-icon': 'Map'
   },
   fields: {
     add: {
@@ -20,7 +23,7 @@ module.exports = {
       },
       mapZoomLevel: {
         type: 'integer',
-        label: 'Map Zoom Level',
+        label: 'Map zoom level',
         min: 1,
         max: 14,
         def: 9

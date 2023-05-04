@@ -4,7 +4,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Columns',
-    icon: 'pillar'
+    icon: 'view-column-icon'
+  },
+  icons: {
+    'view-column-icon': 'ViewColumn'
   },
   fields: {
     add: {
@@ -93,8 +96,5 @@ module.exports = {
         }
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };

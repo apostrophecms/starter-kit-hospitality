@@ -1,7 +1,11 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Custom Form'
+    label: 'Custom Form',
+    icon: 'form-icon'
+  },
+  icons: {
+    'form-icon': 'FormDropdown'
   },
   fields: {
     add: {
@@ -13,14 +17,14 @@ module.exports = {
             value: 'background'
           },
           {
-            label: 'Two Column',
+            label: 'Two column',
             value: 'column'
           }
         ]
       },
       backgroundStyle: {
         type: 'select',
-        label: 'Background Style',
+        label: 'Background style',
         required: true,
         def: 'image',
         choices: [
@@ -40,7 +44,7 @@ module.exports = {
       _backgroundImage: {
         type: 'relationship',
         withType: '@apostrophecms/image',
-        label: 'Select a background image',
+        label: 'Select an image',
         max: 1,
         if: {
           $or: [

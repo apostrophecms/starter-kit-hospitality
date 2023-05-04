@@ -2,7 +2,10 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Call to action',
-    icon: 'cog-icon'
+    icon: 'gesture-tap-button-icon'
+  },
+  icons: {
+    'gesture-tap-button-icon': 'GestureTapButton'
   },
   fields: {
     add: {
@@ -44,7 +47,7 @@ module.exports = {
       },
       featureImage: {
         type: 'area',
-        label: 'Feature Image',
+        label: 'Feature image',
         required: true,
         options: {
           max: 1,
@@ -65,8 +68,5 @@ module.exports = {
         }
       }
     }
-  },
-  icons: {
-    pillar: 'Pillar'
   }
 };

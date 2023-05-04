@@ -17,7 +17,7 @@ module.exports = {
       },
       price: {
         type: 'float',
-        label: 'Item Price',
+        label: 'Item price',
         min: 0.01,
         def: 0.00,
         required: true
