@@ -1,11 +1,9 @@
+{% import "ui.html" as ui %}
+
 {% fragment navbar(data) %}
 <div class="navigation">
   <div class="navigation__logo">
-    {% set imageObject = apos
-      .attachment
-      .first(data.global.logo) %}
-
-    <img src="{{ apos.attachment.url(imageObject) }}" alt="{{ data.global.title }}"/>
+    {{ ui.button(data.global.logo) }}
   </div>
 
   <button class="navigation__menu-btn">Menu</button>

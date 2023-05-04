@@ -1,12 +1,10 @@
+{% import "ui.html" as ui %}
+
 {% fragment footer(data) %}
 <div class="footer">
   <div class="footer__main">
     <div class="footer__logo">
-      {% set imageObject = apos
-        .attachment
-        .first(data.global.logo) %}
-
-      <img src="{{ apos.attachment.url(imageObject) }}" alt="{{ data.global.title }}"/>
+      {{ ui.button(data.global.logo) }}
     </div>
 
     <div class="footer__nav-items">
