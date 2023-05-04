@@ -15,11 +15,6 @@ $yellow: #ffc107 !default;
 $cyan: #0dcaf0 !default;
 $green: #198754 !default;
 
-// Box shadows
-$box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03) !default;
-$box-shadow-sm: 0px 4px 8px -2px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.06) !default;
-$box-shadow-lg: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03) !default;
-
 // Theme colour variables
 $primary: $black !default;
 $secondary: $white !default;
@@ -39,6 +34,15 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
 ) !default;
+
+// Gradients variables
+$gradient-dark: linear-gradient(180deg, $primary 0%, $secondary 100%);
+$gradient-light: linear-gradient(180deg, $white 0%, $primary 100%);
+
+// Box shadows
+$box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03) !default;
+$box-shadow-sm: 0px 4px 8px -2px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.06) !default;
+$box-shadow-lg: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03) !default;
 
 // Spacer variables map
 $spacer: 1rem !default;
