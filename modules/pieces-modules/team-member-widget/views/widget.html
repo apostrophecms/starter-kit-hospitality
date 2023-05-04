@@ -1,5 +1,5 @@
 <h2>Team widget</h2>
-<div class="team-widget container">
+<section class="team-widget container">
   {% for member in data.widget._teamMembers %}
     <div class="team-widget__profile team-widget__profile--{{ data.widget.style }}">
       {% set profileImage = apos.image.first(member.profileImage) %}
@@ -8,4 +8,4 @@
       <p class="team-widget__work-title">{{ member.workTitle }}</p>
     </div>
   {% endfor %}
-</div>
+</section>
