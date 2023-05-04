@@ -1,3 +1,5 @@
+const areaConfig = require('../../../lib/area');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
@@ -9,9 +11,12 @@ module.exports = {
   },
   fields: {
     add: {
-      heading: {
-        type: 'string',
-        label: 'Menu heading'
+      headingIntro: {
+        type: 'area',
+        label: 'Heading intro',
+        options: {
+          widgets: areaConfig.richText
+        }
       },
       style: {
         type: 'select',
