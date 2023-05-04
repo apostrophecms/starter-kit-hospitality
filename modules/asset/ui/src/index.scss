@@ -1,4 +1,6 @@
 @import url("~normalize.css");
+// Responsive font size npm package (https://www.npmjs.com/package/rfs)
+@import "rfs/scss";
 // NOTE: We're using a `.bp-` namespace to indicate these are the boilerplate
 // styles.
 
@@ -10,9 +12,16 @@
 // Footer styles
 @import "./scss/footer";
 
-body {
-  width: 100%;
-  color: $primary;
+@import "./scss/_typography";
+@import "./scss/_buttons";
+@import "./scss/_button-arrow";
+
+// apos line-height interferance fix
+.apos-area,
+.apos-area-widget-inner,
+.apos-area-widget-wrapper,
+.apos-areas-widgets-list {
+  line-height: unset !important;
 }
 
 *,
@@ -21,13 +30,32 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background: $body-bg;
+  width: 100%;
+  margin: 0; // 1
+  font-family: $body-font-family;
+  @include font-size(1rem);
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: $body-color;
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+}
+
 a {
-  text-decoration: none;
+  color: rgba($link-color, 0.8);
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: rgba($link-color, 1);
+    text-decoration: $link-hover-decoration;
+  }
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
 }
-
-@import "./scss/_buttons";

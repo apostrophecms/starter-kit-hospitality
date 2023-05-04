@@ -4,7 +4,7 @@ export default () => {
       selector: '[data-accordion]',
       player: function (el) {
         // Find our accordion buttons
-        const buttons = el.querySelectorAll('.accordion-item');
+        const buttons = el.querySelectorAll('[data-accordion-item]');
 
         // For each accordion button set up the trigger
         buttons.forEach((button) => {

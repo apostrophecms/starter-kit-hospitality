@@ -14,7 +14,12 @@
 {% endblock %}
 
 {% block beforeMain %}
-    {% render navigation.navbar(data) %}
+  {# Hospitality fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital@0;1&display=swap" rel="stylesheet">
+  {% render navigation.navbar(data) %}
+
 {% endblock %}
 
 {% block main %}

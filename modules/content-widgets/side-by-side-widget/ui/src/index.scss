@@ -4,8 +4,13 @@
   display: flex;
   &__column-item {
     width: 50%;
-  }
-  .invert {
-    order: 1;
+    &:first-child {
+      margin-right: 20px;
+    }
+    &.invert {
+      order: 1;
+      margin-right: 0;
+      margin-left: 20px;
+    }
   }
 }

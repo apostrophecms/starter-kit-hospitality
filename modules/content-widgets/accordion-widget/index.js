@@ -25,7 +25,7 @@ module.exports = {
               type: 'area',
               label: 'Content',
               options: {
-                widgets: areaConfig
+                widgets: areaConfig.all
               }
             }
           }
