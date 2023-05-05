@@ -11,6 +11,7 @@ module.exports = {
     add: {
       layout: {
         type: 'select',
+        def: 'background',
         choices: [
           {
             label: 'Background',
@@ -25,7 +26,6 @@ module.exports = {
       backgroundStyle: {
         type: 'select',
         label: 'Background style',
-        required: true,
         def: 'image',
         choices: [
           {
@@ -59,16 +59,6 @@ module.exports = {
         label: 'Pick a background color',
         if: {
           backgroundStyle: 'color'
-        }
-      },
-      content: {
-        type: 'area',
-        label: 'Content',
-        options: {
-          max: 1,
-          widgets: {
-            '@apostrophecms/rich-text': {}
-          }
         }
       },
       form: {

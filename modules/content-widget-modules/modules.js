@@ -10,6 +10,7 @@ module.exports = {
   'map-widget': {},
   'pricing-widget': {},
   'side-by-side-widget': {},
+  'subscription-form-widget': {},
   'image-widget': {},
   'rich-text-widget': {}
 };

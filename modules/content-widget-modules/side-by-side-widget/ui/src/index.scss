@@ -2,15 +2,17 @@
 
 .side-by-side {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   &__column-item {
-    width: 50%;
-    &:first-child {
-      margin-right: 20px;
-    }
     &.invert {
       order: 1;
-      margin-right: 0;
-      margin-left: 20px;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+    &__column-item {
+      width: 50%;
     }
   }
 }

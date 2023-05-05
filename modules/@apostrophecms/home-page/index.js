@@ -23,7 +23,8 @@ module.exports = {
             // Marketing widgets
             accordion: {},
             pricing: {},
-            'team-member': {}
+            'team-member': {},
+            'subscription-form': {}
           }
         }
       }

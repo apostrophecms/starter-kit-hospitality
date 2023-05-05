@@ -1,0 +1,14 @@
+.subscription-form {
+  .my-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__input {
+      max-width: 340px;
+    }
+    &__submit {
+      margin: 0;
+      margin-left: 1rem;
+    }
+  }
+}

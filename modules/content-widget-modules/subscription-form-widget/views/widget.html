@@ -1,4 +1,4 @@
-<h2>Custom form widget</h2>
+<h2>Subscription Form Widget</h2>
 
 {% set layout = data.widget.layout %}
 {% set style = data.widget.backgroundStyle %}
@@ -11,14 +11,23 @@
 {% endif %}
 
 <section 
-  class="custom-form custom-form--{{ layout }} {{ 'container' if layout === 'column' }}"
+  class="subscription-form custom-form custom-form--{{ layout }} {{ 'container' if layout === 'column' }}"
   style="
     {{ 'background-image: url(' + backgroundPath + ')' if style === 'image' and layout === 'background'  }}
     {{ 'background: ' + backgroundColor + '' if style === 'color' and layout === 'background' }}
   "
 >
   <div class="custom-form__column-item">
-      {% area data.widget, 'form' %}
+    <div>
+      {% area data.widget, 'content' %}
+    </div>
+    <div>
+      <form class="my-form" action="#">
+        <input class="my-form__input" type="email" placeholder="email">
+        <button class="my-form__submit" type="submit">Submit</button>
+      </form>
+      {# {% area data.widget, 'form' %} #}
+    </div>
   </div>
   {% if layout === 'column' %}
     <div class="custom-form__column-item">

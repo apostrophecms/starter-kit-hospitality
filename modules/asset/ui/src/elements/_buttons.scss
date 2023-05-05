@@ -1,5 +1,6 @@
-.btn {
-  padding: 16px 32px;
+.btn,
+.my-form__submit {
+  padding: 1rem 2rem;
   width: 100%;
   display: inline-block;
   font-weight: bold;
@@ -17,16 +18,17 @@
 }
 
 .btn--sm {
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   font-size: 0.75rem;
 }
 
 .btn--lg {
-  padding: 20px 40px;
+  padding: 1.25rem 2.5rem;
   font-size: 1.25rem;
 }
 
-.btn--primary {
+.btn--primary,
+.my-form__submit {
   background: $primary;
   border: none;
   color: $white;

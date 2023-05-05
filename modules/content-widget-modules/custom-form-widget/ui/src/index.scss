@@ -2,6 +2,7 @@
 
 .custom-form {
   display: flex;
+  gap: 2rem;
 
   &--background {
     background-position: 50% 50%;
@@ -9,6 +10,9 @@
 
     align-items: center;
     justify-content: center;
+
+    color: $white;
+    text-align: center;
   }
 
   &--column {
