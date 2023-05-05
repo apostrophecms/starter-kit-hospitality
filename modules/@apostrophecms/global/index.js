@@ -18,8 +18,8 @@ module.exports = {
 		},
 	  },
 	  group: {
-		basic: {
-		  label: 'Basics',
+		brand: {
+		  label: 'Brand',
 		  fields: [ 'title', 'logo' ]
 		}
 	  }
