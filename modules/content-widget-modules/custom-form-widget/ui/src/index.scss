@@ -2,7 +2,12 @@
 
 .custom-form {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
+
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+  }
 
   &--background {
     background-position: 50% 50%;
@@ -11,13 +16,9 @@
     align-items: center;
     justify-content: center;
 
-    color: $white;
     text-align: center;
   }
 
-  &--column {
-    justify-content: space-around;
-  }
   &__column-item {
     flex-basis: 50%;
   }

@@ -30,7 +30,7 @@
     box-sizing: border-box;
   }
 
-  // Form styling
+  // Form element styling
   &__input {
     border: 1px solid $primary;
     background-color: white;
@@ -95,10 +95,6 @@
     margin: 0 0 0.5rem;
   }
   &__fieldset {
-    .my-form__legend {
-      float: left;
-      margin-right: 0.25rem;
-    }
     .my-form__label {
       margin: 0;
     }
