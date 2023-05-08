@@ -62,6 +62,16 @@ require('apostrophe')({
     asset: {},
 
     // The project's first custom page type.
-    'default-page': {}
+    'default-page': {},
+    'content-widget-modules': {
+      options: {
+        ignoreNoCodeWarning: true
+      }
+    },
+    'pieces-modules': {
+      options: {
+        ignoreNoCodeWarning: true
+      }
+    }
   }
 });

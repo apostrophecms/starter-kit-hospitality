@@ -1,4 +1,7 @@
 module.exports = {
+  options: {
+    classPrefix: 'my-form'
+  },
   fields: {
     add: {
       subscription: {

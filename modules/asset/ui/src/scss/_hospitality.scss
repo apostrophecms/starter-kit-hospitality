@@ -1,0 +1,24 @@
+// Hospitality colours
+// Primary
+$jungle-green: #84a98c;
+$navy: #2f3e46;
+
+// Secondary
+$light-green-tea: #f6fff8;
+$stone: #cad2c5;
+$sea-green: #52796f;
+$pine-green: #354f52;
+$error-red: #d64545;
+
+// // Gradients variables
+// $gradient-dark: linear-gradient(180deg, $sea-green 0%, $navy 100%);
+// $gradient-light: linear-gradient(180deg, $light-green-tea 0%, $navy 100%);
+
+// Theme colour variables
+$primary: $navy;
+$secondary: $stone;
+$tertiary: $sea-green;
+$success: $jungle-green;
+// $info: $cyan;
+// $warning: $yellow;
+$danger: $error-red;

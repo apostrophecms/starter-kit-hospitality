@@ -1,20 +1,16 @@
-@import "../../../../asset/ui/src/scss/variables";
+@import "../../../../asset/ui/src/scss/theme";
 
 .menu {
   &__list {
-    &.split {
-      display: flex;
-      flex-wrap: wrap;
+    display: grid;
+    grid-gap: 2rem;
+    @media only screen and (min-width: 600px) {
+      &.split {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
   &__item {
-    margin-bottom: 2rem;
-    &.split {
-      flex-basis: 50%;
-      &:nth-child(even) {
-        padding-left: 2rem;
-      }
-    }
     &__title {
       display: flex;
       justify-content: space-between;
