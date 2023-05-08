@@ -7,7 +7,7 @@ module.exports = {
   },
   fields: {
     add: {
-      name: {
+      title: {
         type: 'string',
         label: 'Name',
         required: true
@@ -27,6 +27,10 @@ module.exports = {
         label: 'Work title'
       }
     },
-    group: {}
+    group: {
+      basics: {
+        fields: ['title', 'profileImage', 'workTitle']
+      }
+    }
   }
 };
