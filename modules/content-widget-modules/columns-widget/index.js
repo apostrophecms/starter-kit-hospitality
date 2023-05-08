@@ -22,8 +22,8 @@ module.exports = {
             def: true
           },
           {
-            label: 'Narrow width (60% of the max width, centered)',
-            value: 'narrow'
+            label: 'Contained width',
+            value: 'contained'
           }
         ]
       },
