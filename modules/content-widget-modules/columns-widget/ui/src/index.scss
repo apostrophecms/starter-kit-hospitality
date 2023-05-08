@@ -6,11 +6,6 @@
   color: $primary;
   display: flex;
   flex-direction: column;
-  &--narrow {
-    width: 60%;
-    margin: 0 auto;
-  }
-
   &__column {
     width: 100%;
     &:not(:last-child) {
@@ -18,7 +13,7 @@
     }
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 900px) {
     flex-direction: row;
     justify-content: space-between;
     gap: 5%;
