@@ -16,8 +16,8 @@ module.exports = {
             'image-gallery': {},
             'menu-item': {},
             'side-by-side': {},
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
+            'rich-text': {},
+            image: {},
             map: {},
 
             // Marketing widgets

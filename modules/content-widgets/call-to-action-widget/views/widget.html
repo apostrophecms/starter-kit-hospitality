@@ -1,8 +1,0 @@
-<h2>Call to action widget</h2>
-{% set backgroundImage = apos.image.first(data.widget.featureImage) %}
-<div
-  class="call-to-action call-to-action--{{ data.widget.style}} call-to-action--{{ data.widget.contentAlignment}}"
-  style="background-image: url({{ apos.attachment.url(backgroundImage, { size: 'max' }) }})"
->
-  {% area data.widget, 'content' %}
-</div>

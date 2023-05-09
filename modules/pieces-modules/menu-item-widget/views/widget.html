@@ -1,6 +1,6 @@
 <h2>Menu item widget</h2>
 {% set splitClass = 'split' if data.widget.style === 'split'%}
-<div class="menu">
+<section class="menu container">
   {% area data.widget, 'headingIntro' %}
 
   <div class="menu__list {{ splitClass }}">
@@ -12,4 +12,4 @@
     {% endfor %}
   </div>
 
-</div>
+</section>

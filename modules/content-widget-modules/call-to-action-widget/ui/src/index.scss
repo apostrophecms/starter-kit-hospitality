@@ -1,0 +1,39 @@
+@import "../../../../asset/ui/src/scss/theme";
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: $primary;
+
+  &--basic {
+    height: 50vh;
+    height: 50svh;
+  }
+  &--large-marquee {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  &--left {
+    text-align: left;
+    .button-strip {
+      justify-content: flex-start;
+    }
+  }
+  &--centered {
+    text-align: center;
+    .button-strip {
+      justify-content: center;
+    }
+  }
+  &--right {
+    text-align: right;
+    .button-strip {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,9 +1,0 @@
-<h2>Side by side widget</h2>
-<div class="side-by-side">
-  <div class="side-by-side__column-item {{ 'invert' if data.widget.invert === true}}">
-    {% area data.widget, 'one' with data.contextOptions %}
-  </div>
-  <div class="side-by-side__column-item">
-    {% area data.widget, 'two' with data.contextOptions %}
-  </div>
-</div>

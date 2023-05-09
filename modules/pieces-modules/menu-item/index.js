@@ -22,6 +22,11 @@ module.exports = {
         def: 0.00,
         required: true
       }
+    },
+    group: {
+      basics: {
+        fields: ['title', 'description', 'price']
+      }
     }
   }
 };
