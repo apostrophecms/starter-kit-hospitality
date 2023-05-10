@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 require('apostrophe')({
-  shortName: 'apos-theme',
+  shortName: 'apos-theme-marketing',
   baseUrl: process.env.APOS_BASE_URL || 'http://localhost:3000',
   nestedModuleSubdirs: true,
   modules: {

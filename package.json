@@ -1,5 +1,5 @@
 {
-  "name": "apos-theme",
+  "name": "apos-theme-marketing",
   "version": "1.0.0",
   "description": "Apostrophe Theme",
   "main": "app.js",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:hellocomputer/apos-theme.git"
+    "url": "git@bitbucket.org:hellocomputer/apos-theme-marketing.git"
   },
   "author": "Alt Studios",
   "license": "MIT",
