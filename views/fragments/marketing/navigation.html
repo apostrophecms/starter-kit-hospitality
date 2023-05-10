@@ -1,0 +1,32 @@
+{% import "ui.html" as ui %}
+
+{% fragment navbar(data) %}
+<div class="navigation">
+  <div class="navigation__logo">
+    {{ ui.image(data.global.logo) }}
+  </div>
+
+  <button class="navigation__menu-btn">Menu</button>
+
+  <div class="navigation__nav-items">
+    <ul>
+      <li>
+        <a href="">Features</a>
+      </li>
+      <li>
+        <a href="">Solutions</a>
+      </li>
+      <li>
+        <a href="">Resources</a>
+      </li>
+      <li>
+        <a href="">Pricing</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navigation__user-items">
+    <a href="" class="btn btn--primary btn--sm">Get Started</a>
+  </div>
+</div>
+{% endfragment %}
