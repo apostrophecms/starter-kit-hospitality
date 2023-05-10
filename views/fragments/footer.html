@@ -1,0 +1,47 @@
+{% import "ui.html" as ui %}
+
+{% fragment footer(data) %}
+<div class="footer">
+  <div class="footer__main">
+    <div class="footer__logo">
+      {{ ui.image(data.global.logo) }}
+    </div>
+
+    <div class="footer__nav-items">
+      <ul>
+        <li>
+          <a href="">Features</a>
+        </li>
+        <li>
+          <a href="">Solutions</a>
+        </li>
+        <li>
+          <a href="">Resources</a>
+        </li>
+        <li>
+          <a href="">Pricing</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__social-items">
+      <ul>
+        <li>
+          <a href="">i</a>
+        </li>
+        <li>
+          <a href="">t</a>
+        </li>
+        <li>
+          <a href="">f</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    Copyright. All rights reserved by <a href="">Company</a>
+  </div>
+
+</div>
+{% endfragment %}

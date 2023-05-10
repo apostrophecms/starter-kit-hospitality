@@ -1,9 +1,13 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
+
+{% import 'fragments/navigation.html' as navigation %}
+{% import 'fragments/footer.html' as footer %}
+
 {% extends data.outerLayout %}
 
 {% set title = data.piece.title or data.page.title %}
 {% block title %}
-  {{ title }}
+  {{ data.global.title }}
   {% if not title %}
     {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
   {% endif %}
@@ -14,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital@0;1&display=swap" rel="stylesheet">
+  {% render navigation.navbar(data) %}
 
 {% endblock %}
 
@@ -26,5 +31,5 @@
 {% endblock %}
 
 {% block afterMain %}
-
+    {% render footer.footer(data) %}
 {% endblock %}

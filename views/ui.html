@@ -1,0 +1,52 @@
+{# Button #}
+{% macro button(button, className = "", iconName = "", iconPosition = "l") %}
+  <a 
+    href="button.linkURL"
+    {% if className %}
+      class="{{ className }}" 
+    {% endif %}
+    title="{{ button.linkLabel }}"
+    {% if button.ariaLabel %}
+      aria-label="{{ button.ariaLabel }}"
+    {% endif %} 
+    {% if button.target %} 
+      target="_blank"
+    {% endif %}
+    {% if button.ariaHidden %}
+      aria-hidden="{{ button.ariaHidden }}"
+    {% endif %}
+  >
+  {% if iconName %}
+    {% if iconPosition === 'l' %}
+      <i class="bi bi-{{ iconName }}"></i>
+    {% endif %}
+  {% endif %}
+  <span>{{ button.linkLabel }}</span>
+  {% if iconName %}
+    {% if iconPosition === 'r' %}
+      <i class="bi bi-{{ iconName }}"></i>
+    {% endif %}
+  {% endif %}
+  </a>
+{% endmacro %}
+
+{# Image #}
+{% macro image (image, className = '') %}
+  {% set attachment = apos.image.first(image) %}
+
+  {% if attachment %}
+    <img
+      srcset="{{ apos.image.srcset(attachment) }}"
+      src="{{ apos.attachment.url(attachment, { size: data.options.size or 'full' }) }}"
+      alt="{{ attachment._alt or '' }}"
+      width="{{ apos.attachment.getWidth(attachment) }}"
+      height="{{ apos.attachment.getHeight(attachment) }}"
+      {% if apos.attachment.hasFocalPoint(attachment) %}
+        style="object-position: {{ apos.attachment.focalPointToObjectPosition(attachment) }}"
+      {% endif %}
+      {% if className != '' %}
+        class="{{ className }}"
+      {% endif %}
+    />
+  {% endif %}
+{% endmacro %}

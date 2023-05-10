@@ -6,7 +6,11 @@
 @import "./scss/_functions";
 @import "./scss/theme";
 @import "./scss/_mixins";
-@import "./scss/_containers";
+
+// Navigation styles
+@import "./scss/navigation";
+// Footer styles
+@import "./scss/footer";
 @import "./scss/_typography";
 
 @import "./elements/_buttons";
