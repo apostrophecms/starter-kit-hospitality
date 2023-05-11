@@ -1,32 +1,33 @@
 {% import "ui.html" as ui %}
+{% import "button.html" as buttonFrag %}
 
 {% fragment navbar(data) %}
 <div class="hospitality navigation">
-  <div class="navigation__logo">
-    {{ ui.image(data.global.logo) }}
-  </div>
+  <div class="navigation__logo-container">
+    <div class="navigation__logo">
+      {{ ui.image(data.global.logo) }}
+    </div>
 
-  <button class="navigation__menu-btn">Menu</button>
+    <div class="navigation__menu-btn"></div>
+  </div>
 
   <div class="navigation__nav-items">
     <ul>
-      <li>
-        <a href="">Features</a>
-      </li>
-      <li>
-        <a href="">Solutions</a>
-      </li>
-      <li>
-        <a href="">Resources</a>
-      </li>
-      <li>
-        <a href="">Pricing</a>
-      </li>
+      {% for nav in data.global.headerNav %}
+        {% set path = apos
+          .helper
+          .linkPath(nav) %}
+        <li>
+          <a href="{{ path }}" aria-label="{{ nav.ariaLabel }}">{{ nav.linkText }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 
   <div class="navigation__user-items">
-    <a href="" class="btn btn--primary btn--sm">Get Started</a>
+    {% for btn in data.global.headerBtns %}
+      {% render buttonFrag.render(btn) %}
+    {% endfor %}
   </div>
 </div>
 {% endfragment %}

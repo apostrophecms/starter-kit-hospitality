@@ -12,10 +12,16 @@
 	a {
 	  text-decoration: none;
 	}
+
+	&__logo-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
   
 	&__logo {
 		img {
-			width: 180px;
+			width: 200px;
 			height: auto;
 		}
 	}
@@ -60,6 +66,12 @@
   
 	&__menu-btn {
 	  display: block;
+	  width: 40px;
+	  height: 40px;
+	  background-image: url('/images/menu.svg');
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-size: cover;
   
 	  @media (min-width: 1024px) {
 		display: none;
