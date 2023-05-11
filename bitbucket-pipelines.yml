@@ -4,7 +4,7 @@ pipelines:
   branches:
     develop-hospitality:
       - step:
-          name: Deploy to Heroku
+          name: Deploy Hospitality Theme to Heroku
           deployment: staging
           script:
             - cp modules/assets/ui/src/scss/_theme-hospitality.scss modules/assets/ui/src/scss/_theme.scss
