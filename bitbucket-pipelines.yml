@@ -15,15 +15,15 @@ pipelines:
             - git push heroku HEAD:main
     develop-marketing:
       - step:
-          name: Deploy to Heroku
+          name: Deploy Marketing Theme to Heroku
           deployment: staging
           script:
             - cp modules/asset/ui/src/scss/_theme-marketing.scss modules/asset/ui/src/scss/_theme.scss
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
-            - git push heroku HEAD:main
+            - git remote add heroku-marketing https://git.heroku.com/apos-theme-marketing.git
+            - git push heroku-marketing HEAD:main
 definitions:
   caches:
     npm: $HOME/.npm
