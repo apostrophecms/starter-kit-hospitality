@@ -22,8 +22,8 @@ pipelines:
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - git remote add heroku-marketing https://git.heroku.com/apos-theme-marketing.git
-            - git push heroku-marketing HEAD:main
+            - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
+            - git push heroku HEAD:main
 definitions:
   caches:
     npm: $HOME/.npm
