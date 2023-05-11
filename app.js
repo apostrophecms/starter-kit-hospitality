@@ -1,7 +1,9 @@
 require('dotenv').config();
 
+const theme = process.env.theme || 'hospitality';
+
 require('apostrophe')({
-  shortName: 'apos-theme',
+  shortName: `apos-theme-${theme}`,
   baseUrl: process.env.APOS_BASE_URL || 'http://localhost:3000',
   nestedModuleSubdirs: true,
   modules: {
