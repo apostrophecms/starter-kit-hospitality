@@ -2,6 +2,27 @@ image: node:18.13.0
 
 pipelines:
   branches:
+    develop-themes:
+      - step:
+          name: Deploy Hospitality Theme to Heroku
+          deployment: staging
+          script:
+            - ./scripts/theme-switch.sh
+            - curl https://cli-assets.heroku.com/install.sh | sh
+            - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+            - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+            - git remote add heroku https://git.heroku.com/apos-theme-hospitality.git
+            - git push heroku HEAD:main
+      - step:
+          name: Deploy Marketing Theme to Heroku
+          deployment: staging
+          script:
+            - ./scripts/theme-switch.sh
+            - curl https://cli-assets.heroku.com/install.sh | sh
+            - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+            - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+            - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
+            - git push heroku HEAD:main
     develop-hospitality:
       - step:
           name: Deploy Hospitality Theme to Heroku
