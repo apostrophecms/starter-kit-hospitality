@@ -1,3 +1,11 @@
+{#
+  {% import 'button-arrows.html' as buttonArrows %}
+
+  {% render buttonArrows.button(class) %}
+
+  * Class name - class name for the button arrow icon
+#}
+
 {% fragment button(class) %}
   <div class="button-arrow button-arrow--{{ class }}">
     <svg class="button-arrow__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5,6 +13,12 @@
     </svg>
   </div>
 {% endfragment %}
+
+{#
+  {% import 'button-arrows.html' as buttonArrows %}
+
+  {% render buttonArrows.swiper() %}
+#}
 
 {% fragment swiper() %}
   <div class="swiper-button-arrows">
