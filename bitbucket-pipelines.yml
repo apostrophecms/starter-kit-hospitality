@@ -2,9 +2,7 @@ image: node:18.13.0
 
 definitions:
   steps:
-    - step: &hospitality-theme
-      name: Deploy Hospitality Theme to Heroku
-      script:
+    - step: &hospitality-script
         - cp modules/asset/ui/src/scss/_theme-hospitality.scss modules/asset/ui/src/scss/_theme.scss
         - git add .
         - git commit -m 'change theme file'
@@ -13,9 +11,7 @@ definitions:
         - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
         - git remote add heroku https://git.heroku.com/apos-theme-hospitality.git
         - git push heroku HEAD:main
-    - step: &marketing-theme
-      name: Deploy Marketing Theme to Heroku
-      script:
+    - step: &marketing-script
         - cp modules/asset/ui/src/scss/_theme-marketing.scss modules/asset/ui/src/scss/_theme.scss
         - git add .
         - git commit -m 'change theme file'
@@ -29,18 +25,13 @@ definitions:
           
 pipelines:
   branches:
-    develop-themes:
-      - stage:
-          name: Deploy Themes to Heroku
-          deployment: staging
-          steps:  
-            - step: *hospitality-theme
-            - step: *marketing-theme
     develop-hospitality:
       - step:
-          <<: *hospitality-theme
+          name: Deploy Hospitality Theme to Heroku
           deployment: staging
+          script: *hospitality-script
     develop-marketing:
       - step:
-          <<: *marketing-theme
+          name: Deploy Marketing Theme to Heroku
           deployment: staging
+          script: *marketing-script
