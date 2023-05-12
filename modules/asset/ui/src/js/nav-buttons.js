@@ -1,10 +1,11 @@
 export function navButton() {
-  var navBtn = document.querySelector('.navigation__menu-btn');
-  
-	if (navBtn && navBtn !== null) {
-	  navBtn.addEventListener('click', function () {
-		console.log('Hello World');
-	  });
+
+	if (document.querySelector('.navigation__menu-btn')) {
+		const navBtn = document.querySelector('.navigation__menu-btn');
+		const navItems = document.querySelector('.navigation__nav-items');
+
+		navBtn.addEventListener('click', function () {
+			navItems.classList.toggle('navigation__show');
+		});
 	}
 }
-  

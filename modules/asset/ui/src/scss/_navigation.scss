@@ -1,7 +1,5 @@
 .navigation {
-	padding: 0 30px;
-	background-color: steelblue;
-	border-radius: 60px;
+	padding: 30px;
 	margin: 0 15px;
 	overflow: hidden;
   
@@ -13,13 +11,17 @@
   
 	a {
 	  text-decoration: none;
-	  color: #fff;
-	  font-size: 16px;
+	}
+
+	&__logo-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
   
 	&__logo {
 		img {
-			width: 180px;
+			width: 200px;
 			height: auto;
 		}
 	}
@@ -46,23 +48,30 @@
 		@media (min-width: 1024px) {
 		  margin: 0 15px;
 		}
+
+		a {
+			color: $primary;
+			font-weight: 400;
+		}
 	  }
+	}
+
+	&__show {
+		display: block;
 	}
   
 	&__user-items {
-	  display: none;
-	  
-	  @media (min-width: 1024px) {
-		display: block;
-	  }
-  
-	  button {
-		margin-left: 25px;
-	  }
+		display: flex;
 	}
   
 	&__menu-btn {
 	  display: block;
+	  width: 40px;
+	  height: 40px;
+	  background-image: url('/images/menu.svg');
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-size: cover;
   
 	  @media (min-width: 1024px) {
 		display: none;
