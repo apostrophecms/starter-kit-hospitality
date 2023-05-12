@@ -7,7 +7,6 @@ pipelines:
           name: Deploy Hospitality Theme to Heroku
           deployment: staging
           script:
-            - ./scripts/theme-switch.sh
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
@@ -17,7 +16,6 @@ pipelines:
           name: Deploy Marketing Theme to Heroku
           deployment: staging
           script:
-            - ./scripts/theme-switch.sh
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
@@ -29,7 +27,8 @@ pipelines:
           deployment: staging
           script:
             - cp modules/asset/ui/src/scss/_theme-hospitality.scss modules/asset/ui/src/scss/_theme.scss
-            - ./scripts/theme-switch.sh
+            - echo "Contents of _theme.scss after copying:"
+            - cat modules/asset/ui/src/scss/_theme.scss
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
@@ -40,7 +39,6 @@ pipelines:
           name: Deploy Marketing Theme to Heroku
           deployment: staging
           script:
-            - ./scripts/theme-switch.sh
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
