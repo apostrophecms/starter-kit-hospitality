@@ -10,7 +10,7 @@ definitions:
         - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
         - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
         - git remote add heroku https://git.heroku.com/apos-theme-hospitality.git
-        - git push heroku HEAD:main
+        - git push heroku HEAD:main --force
     - step: &marketing-script
         - cp modules/asset/ui/src/scss/_theme-marketing.scss modules/asset/ui/src/scss/_theme.scss
         - git add .
@@ -19,7 +19,7 @@ definitions:
         - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
         - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
         - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
-        - git push heroku HEAD:main
+        - git push heroku HEAD:main --force
   caches:
     npm: $HOME/.npm
           
