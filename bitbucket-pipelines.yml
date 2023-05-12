@@ -25,6 +25,13 @@ definitions:
           
 pipelines:
   branches:
+    develop-themes:
+      - step: 
+          script: *hospitality-script
+      - step:
+          name: Deploy Hospitality and Marketing Themes to Heroku
+          deployment: staging
+          script: *marketing-script
     develop-hospitality:
       - step:
           name: Deploy Hospitality Theme to Heroku
