@@ -22,7 +22,7 @@
       <ul>   
         {% for social in data.global.social %}
         <li>
-          <a target="_blank" href="{{ social.link }}">
+          <a aria-label="{{ social.icon }} link" target="_blank" href="{{ social.link }}">
             <img src="/images/social-icons/{{ social.icon }}.svg" />
           </a>
         </li>
