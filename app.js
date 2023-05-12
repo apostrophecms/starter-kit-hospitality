@@ -1,7 +1,9 @@
 require('dotenv').config();
 
+const theme = process.env.theme || 'hospitality';
+
 require('apostrophe')({
-  shortName: 'apos-theme',
+  shortName: process.env.APOS_BASE_URL ? `apos-theme-${theme}` : 'apos-theme',
   baseUrl: process.env.APOS_BASE_URL || 'http://localhost:3000',
   nestedModuleSubdirs: true,
   modules: {
@@ -60,6 +62,7 @@ require('apostrophe')({
     // `asset` supports the project's webpack build for client-side assets.
     helper: {},
     asset: {},
+    settings: {},
 
     // The project's first custom page type.
     'default-page': {},
