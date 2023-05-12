@@ -2,6 +2,4 @@ export APOS_RELEASE_ID=`cat /dev/urandom |env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fo
 
 echo $APOS_RELEASE_ID > ./release-id
 
-cp ./modules/asset/ui/src/scss/_theme-marketing.scss ./modules/asset/ui/src/scss/_theme.scss
-
 node app @apostrophecms/asset:build || exit 1
