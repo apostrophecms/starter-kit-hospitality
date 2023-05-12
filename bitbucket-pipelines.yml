@@ -27,8 +27,8 @@ pipelines:
           deployment: staging
           script:
             - cp modules/asset/ui/src/scss/_theme-hospitality.scss modules/asset/ui/src/scss/_theme.scss
-            - echo "Contents of _theme.scss after copying:"
-            - cat modules/asset/ui/src/scss/_theme.scss
+            - git add .
+            - git commit -m 'change theme file'
             - curl https://cli-assets.heroku.com/install.sh | sh
             - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
             - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
