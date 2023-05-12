@@ -25,7 +25,7 @@ definitions:
           
 pipelines:
   branches:
-    develop-themes:
+    develop:
       - step: 
           script: *hospitality-script
       - step:
