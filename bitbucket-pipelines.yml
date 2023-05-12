@@ -1,58 +1,46 @@
 image: node:18.13.0
 
+definitions:
+  steps:
+    - step: &hospitality-theme
+      name: Deploy Hospitality Theme to Heroku
+      script:
+        - cp modules/asset/ui/src/scss/_theme-hospitality.scss modules/asset/ui/src/scss/_theme.scss
+        - git add .
+        - git commit -m 'change theme file'
+        - curl https://cli-assets.heroku.com/install.sh | sh
+        - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+        - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+        - git remote add heroku https://git.heroku.com/apos-theme-hospitality.git
+        - git push heroku HEAD:main
+    - step: &marketing-theme
+      name: Deploy Marketing Theme to Heroku
+      script:
+        - cp modules/asset/ui/src/scss/_theme-marketing.scss modules/asset/ui/src/scss/_theme.scss
+        - git add .
+        - git commit -m 'change theme file'
+        - curl https://cli-assets.heroku.com/install.sh | sh
+        - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+        - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
+        - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
+        - git push heroku HEAD:main
+  caches:
+    npm: $HOME/.npm
+          
 pipelines:
   branches:
     develop-themes:
-      - step:
-          name: Deploy Hospitality Theme to Heroku
+      - stage:
+          name: Deploy Themes to Heroku
           deployment: staging
-          script:
-            - cp modules/asset/ui/src/scss/_theme-hospitality.scss modules/asset/ui/src/scss/_theme.scss
-            - git add .
-            - git commit -m 'change theme file'
-            - curl https://cli-assets.heroku.com/install.sh | sh
-            - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - git remote add heroku https://git.heroku.com/apos-theme-hospitality.git
-            - git push heroku HEAD:main
-      - step:
-          name: Deploy Marketing Theme to Heroku
-          deployment: staging
-          script:
-            - cp modules/asset/ui/src/scss/_theme-marketing.scss modules/asset/ui/src/scss/_theme.scss
-            - git add .
-            - git commit -m 'change theme file'
-            - curl https://cli-assets.heroku.com/install.sh | sh
-            - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
-            - git push heroku HEAD:main
+          steps:  
+            - step: *hospitality-theme
+            - step: *marketing-theme
     develop-hospitality:
       - step:
-          name: Deploy Hospitality Theme to Heroku
+          <<: *hospitality-theme
           deployment: staging
-          script:
-            - cp modules/asset/ui/src/scss/_theme-hospitality.scss modules/asset/ui/src/scss/_theme.scss
-            - git add .
-            - git commit -m 'change theme file'
-            - curl https://cli-assets.heroku.com/install.sh | sh
-            - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - git remote add heroku https://git.heroku.com/apos-theme-hospitality.git
-            - git push heroku HEAD:main
     develop-marketing:
       - step:
-          name: Deploy Marketing Theme to Heroku
+          <<: *marketing-theme
           deployment: staging
-          script:
-            - cp modules/asset/ui/src/scss/_theme-marketing.scss modules/asset/ui/src/scss/_theme.scss
-            - git add .
-            - git commit -m 'change theme file'
-            - curl https://cli-assets.heroku.com/install.sh | sh
-            - echo "machine api.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - echo "machine git.heroku.com login $HEROKU_ACCOUNT password $HEROKU_API_KEY" >> ~/.netrc
-            - git remote add heroku https://git.heroku.com/apos-theme-marketing.git
-            - git push heroku HEAD:main
-definitions:
-  caches:
-    npm: $HOME/.npm
