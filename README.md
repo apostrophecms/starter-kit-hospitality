@@ -17,6 +17,18 @@ This boilerplate is designed so you can install and start running it right away.
 - [ ] **Decide if you want hot reloading on.** This boilerplate uses nodemon to restart the app when files are changed. In `modules/@apostrophecms/asset/index.js` there is an option enabled to refresh the browser on restart. If you like this, do nothing. If you don't, remove the option or set it to `false`. The option has no effect when the app is in production.
 - [ ] **Update the `className` options in `app.js`.** This option is set for core widget types to provide CSS styling hooks. It is namespaced with `bp-` for "boilerplate." You will likely want to update that to match your general CSS class naming practices.
 
+## Apostrophecms module extensions
+The below Apostrophecms extensions have been included within this themes main apostrophecms app.js file.
+
+- [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
+(View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
+- [ ] **@apostrophecms/open-graph.** Provides a way to edit metadata for Facebook's Open Graph standard.
+(View extension - https://apostrophecms.com/extensions/open-graph-tools-3) 
+- [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS 3.x. Adds useful meta fields to all pages and pieces.
+(View extension - https://github.com/apostrophecms/apostrophe-seo)
+- [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in Apostrophe 3.x.
+(View extension - https://apostrophecms.com/extensions/site-maps-3-x)
+
 ## Themes imported NPM Packages
 - [ ] **dotenv.** "dotenv" is a npm package that loads environment variables from a .env file. It's useful for securely storing sensitive information like API keys, passwords, and other configuration settings.
 

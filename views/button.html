@@ -1,3 +1,17 @@
+{#
+  {% import "button.html" as buttonFrag %}
+  {% render buttonFrag.render(button) %}
+
+  * button - button object
+    ~ block
+    ~ alignment
+    ~ _id
+    ~ linkText
+    ~ linkTarget
+    ~ style
+    ~ size
+#}
+
 {% import "link.html" as link %}
 
 {% fragment render(button) %}
