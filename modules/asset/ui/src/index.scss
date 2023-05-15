@@ -14,9 +14,9 @@
 @import "./scss/footer";
 @import "./scss/_typography";
 
-@import "./elements/_buttons";
-@import "./elements/_button-arrow";
-@import "./elements/_forms";
+@import "./scss-elements/_buttons";
+@import "./scss-elements/_button-arrow";
+@import "./scss-elements/_forms";
 
 // apos line-height interferance fix
 .apos-area,
@@ -60,4 +60,14 @@ a {
   height: auto;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
+}
+
+.widget-my-spacing {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.widget-py-spacing {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
