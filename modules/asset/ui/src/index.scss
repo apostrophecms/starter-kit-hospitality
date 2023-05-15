@@ -46,13 +46,7 @@ body {
 }
 
 a {
-  color: rgba($link-color, 0.8);
-  text-decoration: $link-decoration;
-
-  &:hover {
-    color: rgba($link-color, 1);
-    text-decoration: $link-hover-decoration;
-  }
+  @include link-style;
 }
 
 .img-fluid {

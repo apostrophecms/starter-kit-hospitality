@@ -8,10 +8,6 @@
     justify-content: space-between;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   &__logo-container {
     display: flex;
     align-items: center;
@@ -49,10 +45,8 @@
       @media (min-width: 1024px) {
         margin: 0 1rem;
       }
-
       a {
-        color: $primary;
-        font-weight: 400;
+        @include inverse-link-style;
       }
     }
   }

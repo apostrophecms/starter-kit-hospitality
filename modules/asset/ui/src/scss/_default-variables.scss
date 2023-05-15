@@ -60,9 +60,9 @@ $body-color: $primary !default;
 $body-bg: $white !default;
 
 // Link
-$link-color: $gray-600 !default;
-$link-decoration: underline !default;
-$link-hover-decoration: underline !default;
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
 
 // Font settings
 $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
