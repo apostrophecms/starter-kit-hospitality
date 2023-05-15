@@ -76,6 +76,10 @@ module.exports = {
 								{
 									label: 'Twitter',
 									value: 'twitter'
+								},
+								{
+									label: 'LinkedIn',
+									value: 'linkedin'
 								}
 							]
 						}
