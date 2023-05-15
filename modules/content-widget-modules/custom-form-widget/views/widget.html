@@ -8,7 +8,10 @@
 {% endif %}
 
 <section 
-  class="custom-form custom-form--{{ layout }} {{ 'container' if layout === 'column' }}"
+  class="
+    custom-form custom-form--{{ layout }}
+    {{ 'container widget-my-spacing' if layout === 'column' else 'widget-py-spacing' }}
+  "
   style="
     {{ 'background-image: url(' + apos.attachment.url(backgroundImage, {size: 'max'}) + ')' if style === 'image' and layout === 'background' and backgroundImage  }}
     {{ 'background: ' + backgroundColor + '' if style === 'color' and layout === 'background' }}
