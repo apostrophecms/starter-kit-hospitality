@@ -1,6 +1,6 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
 
-{% import 'fragments/marketing/navigation.html' as navigation %}
+{% import 'fragments/header.html' as header %}
 {% import 'fragments/footer.html' as footer %}
 
 {% extends data.outerLayout %}
@@ -21,7 +21,7 @@
   {% else %}
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital@0;1&display=swap" rel="stylesheet">
   {% endif %}
-  {% render navigation.navbar(data) %}
+  {% render header.navigationBar(data) %}
 
 {% endblock %}
 

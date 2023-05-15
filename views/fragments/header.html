@@ -1,12 +1,12 @@
 {% import "ui.html" as ui %}
 {% import "button.html" as buttonFrag %}
 
-{% fragment navbar(data) %}
+{% fragment navigationBar(data) %}
 <div class="navigation navigation--hospitality">
   <div class="navigation__logo-container">
-    <div class="navigation__logo">
+    <a href="/" class="navigation__logo">
       {{ ui.image(data.global.logo) }}
-    </div>
+    </a>
 
     <div class="navigation__menu-btn"></div>
   </div>
@@ -22,12 +22,12 @@
         </li>
       {% endfor %}
     </ul>
-  </div>
 
-  <div class="navigation__user-items">
-    {% for btn in data.global.headerBtns %}
-      {% render buttonFrag.render(btn) %}
-    {% endfor %}
+    <div class="navigation__user-items">
+      {% for btn in data.global.headerBtns %}
+        {% render buttonFrag.render(btn) %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endfragment %}
