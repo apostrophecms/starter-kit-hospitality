@@ -7,12 +7,12 @@
 @import "./scss/_mixins";
 
 @import "./scss/_containers";
+@import "./scss/_typography";
 
 // Navigation styles
-@import "./scss/navigation";
+@import "./scss-elements/navigation";
 // Footer styles
-@import "./scss/footer";
-@import "./scss/_typography";
+@import "./scss-elements/footer";
 
 @import "./scss-elements/_buttons";
 @import "./scss-elements/_button-arrow";
