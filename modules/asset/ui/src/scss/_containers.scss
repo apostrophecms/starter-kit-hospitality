@@ -45,7 +45,8 @@ $container-sizes: (
   padding-left: 1rem;
 
   &:not(.is-fluid) {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
     @each $bp, $container-size in $container-sizes {
       @include min(#{bp(#{$bp})}) {
