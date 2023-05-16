@@ -1,3 +1,5 @@
+const aosSchema = require('../../../lib/aosSchema.js');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
@@ -35,7 +37,8 @@ module.exports = {
         label: 'Images',
         required: true,
         max: 10
-      }
+      },
+      ...aosSchema
     }
   }
 };

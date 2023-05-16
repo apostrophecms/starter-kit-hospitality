@@ -1,3 +1,5 @@
+const aosSchema = require('../../../lib/aosSchema.js');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
@@ -69,7 +71,8 @@ module.exports = {
             '@apostrophecms/form': {}
           }
         }
-      }
+      },
+      ...aosSchema
     }
   }
 };

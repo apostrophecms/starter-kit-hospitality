@@ -44,6 +44,7 @@
     "@apostrophecms/open-graph": "^1.2.1",
     "@apostrophecms/seo": "^1.2.0",
     "@apostrophecms/sitemap": "^1.0.2",
+    "aos": "^2.3.4",
     "apostrophe": "^3.0.0",
     "dotenv": "^16.0.3",
     "normalize.css": "^8.0.1",
