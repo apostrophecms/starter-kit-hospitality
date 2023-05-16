@@ -1,4 +1,5 @@
 const buttonSchema = require('../../../lib/buttonSchema');
+const aosSchema = require('../../../lib/aosSchema.js');
 
 module.exports = {
   extend: '@apostrophecms/widget-type',
@@ -19,7 +20,8 @@ module.exports = {
             ...buttonSchema.button
           }
         }
-      }
+      },
+      ...aosSchema
     }
   }
 };

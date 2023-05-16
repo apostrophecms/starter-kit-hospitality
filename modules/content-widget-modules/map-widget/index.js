@@ -1,3 +1,4 @@
+const aosSchema = require('../../../lib/aosSchema.js');
 // TODO: Set up to be based off of map api requirements
 
 module.exports = {
@@ -27,7 +28,8 @@ module.exports = {
         min: 1,
         max: 14,
         def: 9
-      }
+      },
+      ...aosSchema
     }
   }
 };

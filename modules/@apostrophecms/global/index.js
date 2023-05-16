@@ -35,7 +35,7 @@ module.exports = {
 				limit: 5,
 				fields: {
 					add: {
-						...linkSchema.link,
+						...linkSchema,
 					}
 				}
 			},
@@ -45,7 +45,7 @@ module.exports = {
 				limit: 5,
 				fields: {
 					add: {
-						...linkSchema.link,
+						...linkSchema,
 					}
 				}
 			},
