@@ -1,13 +1,24 @@
 @import "../../../../asset/ui/src/scss/variables";
 
 .call-to-action {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  background-position: 50% 50%;
-  background-size: cover;
-  color: $primary;
+  color: $white;
+
+  &__background {
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    filter: brightness(0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
   &--basic {
     height: 50vh;
