@@ -1,3 +1,5 @@
+const areaConfig = require('../../../lib/area');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   fields: {
@@ -7,7 +9,7 @@ module.exports = {
         label: 'Rich Text',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {}
+            ...areaConfig.richText
           }
         }
       }

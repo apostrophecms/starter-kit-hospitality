@@ -1,3 +1,4 @@
+const areaConfig = require('../../../lib/area');
 const aosSchema = require('../../../lib/aosSchema.js');
 
 module.exports = {
@@ -64,12 +65,11 @@ module.exports = {
         required: true,
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {},
+            ...areaConfig.richText,
             'button-strip': {}
           }
         }
-      },
-      ...aosSchema
+      }
     }
   }
 };

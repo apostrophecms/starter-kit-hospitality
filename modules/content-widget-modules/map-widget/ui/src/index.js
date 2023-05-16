@@ -35,9 +35,7 @@ export default () => {
               center: coords,
               zoom: el.dataset.mapzoomlevel
             }),
-            target: el.querySelector('.map'),
-            controls: [], // Remove any map controls
-            interactions: [] // Remove any map interactions
+            target: el.querySelector('.map')
           });
 
           // Define the dynamic position variable
