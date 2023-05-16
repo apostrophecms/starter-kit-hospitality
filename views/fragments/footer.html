@@ -1,7 +1,7 @@
 {% import "ui.html" as ui %}
 
 {% fragment footer(data) %}
-<div class="footer">
+<div class="footer container is-fluid widget-py-spacing">
   <div class="footer__main">
     <a href="/" class="footer__logo">
       {{ ui.image(data.global.logo) }}
@@ -32,7 +32,7 @@
   </div>
 
   <div class="footer__copyright">
-    Copyright {{ apos.modules.settings.options.year }}. All rights reserved by <a href="#">Company</a>
+    <p><small>© {{ apos.modules.settings.options.year }}. All rights reserved by <a href="#">Company</a></small></p>
   </div>
 
 </div>

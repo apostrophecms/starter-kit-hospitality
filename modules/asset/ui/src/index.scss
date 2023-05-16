@@ -7,12 +7,12 @@
 @import "./scss/_mixins";
 
 @import "./scss/_containers";
+@import "./scss/_typography";
 
 // Navigation styles
-@import "./scss/navigation";
+@import "./scss-elements/navigation";
 // Footer styles
-@import "./scss/footer";
-@import "./scss/_typography";
+@import "./scss-elements/footer";
 
 @import "./scss-elements/_buttons";
 @import "./scss-elements/_button-arrow";
@@ -46,13 +46,7 @@ body {
 }
 
 a {
-  color: rgba($link-color, 0.8);
-  text-decoration: $link-decoration;
-
-  &:hover {
-    color: rgba($link-color, 1);
-    text-decoration: $link-hover-decoration;
-  }
+  @include link-style;
 }
 
 .img-fluid {

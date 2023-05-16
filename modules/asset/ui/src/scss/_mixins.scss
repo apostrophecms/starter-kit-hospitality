@@ -1,0 +1,21 @@
+@mixin link-style {
+  color: rgba($link-color, 0.7);
+  text-decoration: $link-decoration;
+  transition: color $animate-easing;
+
+  &:hover {
+    color: rgba($link-color, 1);
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+@mixin inverse-link-style {
+  color: rgba($link-color, 1);
+  text-decoration: $link-decoration;
+  transition: color $animate-easing;
+
+  &:hover {
+    color: rgba($link-color, 0.7);
+    text-decoration: $link-hover-decoration;
+  }
+}
