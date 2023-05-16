@@ -1,6 +1,18 @@
+const areaConfig = require('../../../lib/area');
+
 module.exports = {
   options: {
-    classPrefix: 'my-form'
+    classPrefix: 'my-form',
+    formWidgets: {
+      '@apostrophecms/form-text-field': {},
+      '@apostrophecms/form-textarea-field': {},
+      '@apostrophecms/form-boolean-field': {},
+      '@apostrophecms/form-select-field': {},
+      '@apostrophecms/form-radio-field': {},
+      '@apostrophecms/form-checkboxes-field': {},
+      '@apostrophecms/form-conditional': {},
+      ...areaConfig.richText
+    }
   },
   fields: {
     add: {

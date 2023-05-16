@@ -61,6 +61,32 @@ module.exports = {
           backgroundStyle: 'color'
         }
       },
+      fontColor: {
+        type: 'select',
+        label: 'Change font color',
+        choices: [
+          {
+            label: 'Primary',
+            value: 'primary'
+          },
+          {
+            label: 'Secondary',
+            value: 'secondary'
+          },
+          {
+            label: 'Tertiary',
+            value: 'tertiary'
+          },
+          {
+            label: 'Black',
+            value: 'black'
+          },
+          {
+            label: 'White',
+            value: 'white'
+          }
+        ]
+      },
       form: {
         type: 'area',
         options: {

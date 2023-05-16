@@ -1,3 +1,5 @@
+const areaConfig = require('../../../lib/area');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
@@ -62,7 +64,7 @@ module.exports = {
         required: true,
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {},
+            ...areaConfig.richText,
             'button-strip': {}
           }
         }
