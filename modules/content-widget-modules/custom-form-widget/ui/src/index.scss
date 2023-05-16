@@ -5,6 +5,22 @@
   flex-direction: column;
   gap: 2rem;
 
+  &--primary {
+    color: $primary;
+  }
+  &--secondary {
+    color: $secondary;
+  }
+  &--tertiary {
+    color: $tertiary;
+  }
+  &--black {
+    color: $black;
+  }
+  &--white {
+    color: $white;
+  }
+
   @media only screen and (min-width: 900px) {
     flex-direction: row;
   }
