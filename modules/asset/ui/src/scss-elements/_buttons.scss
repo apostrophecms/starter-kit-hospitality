@@ -3,7 +3,7 @@
   padding: 1rem 2rem;
   width: 100%;
   display: inline-block;
-  font-weight: bold;
+  font-weight: $btn-font-weight;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -41,7 +41,7 @@
 .btn--secondary {
   background: $secondary;
   border: none;
-  color: $primary;
+  color: $btn-secondary-text;
   &:hover {
     color: $primary;
     background: lighten($secondary, 5%);
