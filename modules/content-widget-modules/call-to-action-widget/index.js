@@ -69,7 +69,8 @@ module.exports = {
             'button-strip': {}
           }
         }
-      }
+      },
+      ...aosSchema
     }
   }
 };
