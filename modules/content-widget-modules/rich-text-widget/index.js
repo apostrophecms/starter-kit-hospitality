@@ -1,4 +1,5 @@
 const areaConfig = require('../../../lib/area');
+const aosSchema = require('../../../lib/aosSchema.js');
 
 module.exports = {
   extend: '@apostrophecms/widget-type',
@@ -12,7 +13,8 @@ module.exports = {
             ...areaConfig.richText
           }
         }
-      }
+      },
+      ...aosSchema
     }
   }
 };
