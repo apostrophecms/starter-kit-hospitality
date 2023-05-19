@@ -137,6 +137,26 @@ const map = new Map({
   }),
 });
 ```
+
+- [ ] **AOS (Animations)** Animate On Scroll (AOS) library allows you to animate elements as you scroll down and up. If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.
+
+You can import it in your JavaScript file (modules/asset/ui/src/index.js) using the import statement:
+
+```
+import AOS from 'aos';
+```
+Then, initialize AOS. For example:
+
+AOS.init();
+
+For usage within this theme, Create an instance of 'aosSchema' in your widget and add as field. For example:
+
+const aosSchema = require('../../../lib/aosSchema.js');
+
+add: {
+  ...aosSchema
+}
+
 ## You really want the docs
 
 Right now, [all the juicy info is in the A3 docs](https://a3.docs.apostrophecms.org), so head over there and start reading! This boilerplate project is a fun introduction to the UI, but you'll want to know more to really try it out.
