@@ -16,6 +16,7 @@ module.exports = {
         type: 'array',
         label: 'Accordions',
         titleField: 'title',
+        inline: true,
         fields: {
           add: {
             title: {

@@ -14,7 +14,7 @@ module.exports = {
             'call-to-action': {},
             'custom-form': {},
             'image-gallery': {},
-            'menu-item': {},
+            'product': {},
             'side-by-side': {},
             'rich-text': {},
             image: {},

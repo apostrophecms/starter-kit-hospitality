@@ -23,6 +23,7 @@ module.exports = {
         type: 'array',
         label: 'Cards',
         titleField: 'label',
+        inline: true,
         max: 4,
         fields: {
           add: {

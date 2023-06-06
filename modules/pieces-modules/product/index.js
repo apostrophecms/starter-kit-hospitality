@@ -1,7 +1,7 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Menu Item',
+    label: 'Product',
     openGraph: false,
     seoFields: false
   },
