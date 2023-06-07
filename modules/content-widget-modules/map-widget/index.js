@@ -44,7 +44,6 @@ module.exports = {
           const geocoder = NodeGeocoder(options);
           const geocoderAddress = await geocoder.geocode(data.widget.address);
 
-          console.log(geocoderAddress);
           if (!geocoderAddress.length) {
             throw new Error('No results found for entered street address, please check address is valid and update the field');
           }
@@ -62,25 +61,4 @@ module.exports = {
       }
     };
   }
-  // helpers(self) {
-  //   return {
-  //     async pattyMap(product) {
-  //       // const options = {
-  //       //   provider: 'google',
-
-  //       //   // Optional depending on the providers
-  //       //   fetch: customFetchImplementation,
-  //       //   apiKey: 'YOUR_API_KEY', // for Mapquest, OpenCage, Google Premier
-  //       //   formatter: null // 'gpx', 'string', ...
-  //       // };
-
-  //       // const geocoder = NodeGeocoder(options);
-
-  //       // // Using callback
-  //       // const res = await geocoder.geocode('29 champs elysée paris');
-  //       // const price = product.price;
-  //       return `{lat: '123', long: '123'}`;
-  //     }
-  //   };
-  // }
 };
