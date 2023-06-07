@@ -16,9 +16,15 @@ export default () => {
       player: function (el) {
 
         apos.util.onReady(() => {
+
+          if (!el.querySelector('[data-map-target')) {
+            return;
+          };
+
+          const mapEl = el.querySelector('[data-map-target');
           // Define the latitude and longitude variables
-          const latitude = el.dataset.latitude || -29.02251;
-          const longitude = el.dataset.longitude || 28.01546;
+          const latitude = mapEl.dataset.latitude;
+          const longitude = mapEl.dataset.longitude;
 
           // Convert the latitude and longitude to the map's projection
           const coords = fromLonLat([longitude, latitude]);
@@ -33,9 +39,9 @@ export default () => {
             ],
             view: new View({
               center: coords,
-              zoom: el.dataset.mapzoomlevel
+              zoom: mapEl.dataset.mapzoomlevel
             }),
-            target: el.querySelector('.map')
+            target: mapEl.querySelector('.map')
           });
 
           // Define the dynamic position variable

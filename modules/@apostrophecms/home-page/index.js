@@ -1,3 +1,5 @@
+const areaConfig = require('../../../lib/area');
+
 module.exports = {
   options: {
     label: 'Home Page'
@@ -8,22 +10,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            // Forms
-            // Hospitality + Marketing widgets
-            columns: {},
-            'call-to-action': {},
-            'custom-form': {},
-            'image-gallery': {},
-            'product': {},
-            'side-by-side': {},
-            'rich-text': {},
-            image: {},
-            map: {},
-
-            // Marketing widgets
-            accordion: {},
-            pricing: {},
-            'team-member': {}
+            ...areaConfig.all
           }
         }
       }

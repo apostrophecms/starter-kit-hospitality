@@ -47,6 +47,7 @@
     "aos": "^2.3.4",
     "apostrophe": "^3.0.0",
     "dotenv": "^16.0.3",
+    "node-geocoder": "^4.2.0",
     "normalize.css": "^8.0.1",
     "ol": "^7.3.0",
     "photoswipe": "^5.3.7",
