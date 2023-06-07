@@ -22,6 +22,7 @@ export default () => {
 
         // Photoswiper lightbox and gallery
         const photoSwipeOptions = {
+          mainClass: 'imageGallery--pswp',
           gallery: '#imageGallery',
           pswpModule: PhotoSwipe,
           // set background opacity

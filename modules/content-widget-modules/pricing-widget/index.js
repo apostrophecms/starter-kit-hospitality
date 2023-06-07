@@ -14,7 +14,7 @@ module.exports = {
     add: {
       intro: {
         type: 'area',
-        label: 'intro',
+        label: 'Intro',
         options: {
           widgets: areaConfig.richText
         }
@@ -23,6 +23,7 @@ module.exports = {
         type: 'array',
         label: 'Cards',
         titleField: 'label',
+        inline: true,
         max: 4,
         fields: {
           add: {

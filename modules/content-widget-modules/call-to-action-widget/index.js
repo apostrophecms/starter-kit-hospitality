@@ -5,7 +5,11 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Call to action',
-    icon: 'gesture-tap-button-icon'
+    icon: 'gesture-tap-button-icon',
+    placeholderUrl: '/modules/@apostrophecms/image-widget/placeholder.jpg'
+  },
+  init(self) {
+    self.determineBestAssetUrl('placeholder');
   },
   icons: {
     'gesture-tap-button-icon': 'GestureTapButton'

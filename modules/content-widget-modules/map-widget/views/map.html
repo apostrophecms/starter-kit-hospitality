@@ -1,0 +1,16 @@
+{% if not data.response %}
+  <p>Something went wrong.</p>
+{% elif data.response.message %}
+  <p>{{ data.response.message }}</p>
+{% else %}
+  <div
+    data-map-target
+    data-aos="{{ data.widget.animationEffects }}"
+    data-latitude="{{ data.widget.latitude }}"
+    data-longitude="{{ data.widget.longitude }}"
+    data-mapzoomlevel="{{ data.widget.mapZoomLevel }}"
+    data-address="{{ data.widget.address }}"
+  >
+    <div class="map"></div>
+  </div>
+{% endif %}

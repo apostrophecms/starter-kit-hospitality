@@ -56,14 +56,14 @@ module.exports = {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig.all
+          widgets: areaConfig.column
         }
       },
       two: {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig.all
+          widgets: areaConfig.column
         },
         if: {
           $or: [
@@ -83,7 +83,7 @@ module.exports = {
           ]
         },
         options: {
-          widgets: areaConfig.all
+          widgets: areaConfig.column
         }
       },
       four: {
@@ -93,7 +93,7 @@ module.exports = {
           cols: 'quadruple'
         },
         options: {
-          widgets: areaConfig.all
+          widgets: areaConfig.column
         }
       },
       ...aosSchema

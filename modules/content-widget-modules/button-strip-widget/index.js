@@ -15,6 +15,7 @@ module.exports = {
       buttons: {
         type: 'array',
         label: 'Button strip',
+        titleField: 'linkText',
         fields: {
           add: {
             ...buttonSchema.button

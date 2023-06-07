@@ -16,6 +16,7 @@ module.exports = {
         type: 'array',
         label: 'Accordions',
         titleField: 'title',
+        inline: true,
         fields: {
           add: {
             title: {
@@ -26,7 +27,7 @@ module.exports = {
               type: 'area',
               label: 'Content',
               options: {
-                widgets: areaConfig.all
+                widgets: areaConfig.apos
               }
             }
           }

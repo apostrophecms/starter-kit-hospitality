@@ -53,7 +53,7 @@ require('apostrophe')({
 
     '@apostrophecms/sitemap': {
       options: {
-        excludeTypes: ['team-member', 'menu-item']
+        excludeTypes: ['team-member', 'product']
       }
     },
     '@apostrophecms/seo': {},

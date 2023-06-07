@@ -1,9 +1,9 @@
 module.exports = {
   // Pieces
-  'menu-item': {},
+  'product': {},
   'team-member': {},
 
   // Related Pieces Widgets
-  'menu-item-widget': {},
+  'product-widget': {},
   'team-member-widget': {}
 };
