@@ -14,7 +14,7 @@ module.exports = {
     add: {
       intro: {
         type: 'area',
-        label: 'intro',
+        label: 'Intro',
         options: {
           widgets: areaConfig.richText
         }

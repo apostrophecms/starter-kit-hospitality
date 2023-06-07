@@ -4,7 +4,7 @@ const aosSchema = require('../../../lib/aosSchema.js');
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Menu',
+    label: 'Product Menu',
     icon: 'list-icon'
   },
   icons: {
