@@ -9,8 +9,9 @@ module.exports = {
       main: {
         type: 'area',
         options: {
-          widgets: {
-            ...areaConfig.all
+          expanded: true,
+          groups: {
+            ...areaConfig.fullExpandedGroup
           }
         }
       }
