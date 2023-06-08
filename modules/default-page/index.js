@@ -1,3 +1,5 @@
+const areaConfig = require('../../lib/area');
+
 module.exports = {
   extend: '@apostrophecms/page-type',
   options: {
@@ -8,10 +10,9 @@ module.exports = {
       main: {
         type: 'area',
         options: {
-          widgets: {
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
+          expanded: true,
+          groups: {
+            ...areaConfig.fullExpandedGroup
           }
         }
       }

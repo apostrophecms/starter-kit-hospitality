@@ -56,14 +56,20 @@ module.exports = {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig.column
+          expanded: true,
+          groups: {
+            ...areaConfig.columnExpandedGroup
+          }
         }
       },
       two: {
         type: 'area',
         contextual: true,
         options: {
-          widgets: areaConfig.column
+          expanded: true,
+          groups: {
+            ...areaConfig.columnExpandedGroup
+          }
         },
         if: {
           $or: [
@@ -83,7 +89,10 @@ module.exports = {
           ]
         },
         options: {
-          widgets: areaConfig.column
+          expanded: true,
+          groups: {
+            ...areaConfig.columnExpandedGroup
+          }
         }
       },
       four: {
@@ -93,7 +102,10 @@ module.exports = {
           cols: 'quadruple'
         },
         options: {
-          widgets: areaConfig.column
+          expanded: true,
+          groups: {
+            ...areaConfig.columnExpandedGroup
+          }
         }
       },
       ...aosSchema
