@@ -1,0 +1,39 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &--primary {
+    color: $primary;
+  }
+  &--secondary {
+    color: $secondary;
+  }
+  &--tertiary {
+    color: $tertiary;
+  }
+  &--black {
+    color: $black;
+  }
+  &--white {
+    color: $white;
+  }
+
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+  }
+
+  &--background {
+    background-position: 50% 50%;
+    background-size: cover;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__column-item {
+    flex-basis: 50%;
+  }
+}

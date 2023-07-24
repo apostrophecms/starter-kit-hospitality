@@ -1,0 +1,54 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.pricing {
+  background: $secondary;
+  &__title {
+    text-align: center;
+  }
+  .cards {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+    grid-gap: 2rem;
+    justify-content: center;
+    padding: initial;
+  }
+  .card {
+    border-radius: $border-radius;
+    padding: 2rem;
+    width: 350px;
+    background: $white;
+    color: $primary;
+    &:nth-child(even) {
+      background: none;
+      border: 1px solid $tertiary;
+      color: $primary;
+    }
+    &--pricing {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__label {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: $tertiary;
+      text-transform: uppercase;
+    }
+    &__feature-list {
+      padding-left: 0;
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+        display: flex;
+      }
+      li:before {
+        margin-right: 10px;
+        font-weight: 700;
+        color: $tertiary;
+        content: "\2713";
+      }
+    }
+  }
+}

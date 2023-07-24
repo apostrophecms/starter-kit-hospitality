@@ -1,8 +1,84 @@
-@import url('~normalize.css');
-// NOTE: We're using a `.bp-` namespace to indicate these are the boilerplate
-// styles.
-@import './scss/_settings';
-@import './scss/_type';
-@import './scss/_layout';
-@import './scss/_welcome';
-@import './scss/_widgets';
+@import url("~normalize.css");
+// Responsive font size npm package (https://www.npmjs.com/package/rfs)
+@import "rfs/scss";
+
+@import "./scss/_functions";
+@import "./scss/_variables";
+@import "./scss/_mixins";
+
+@import "./scss/_containers";
+@import "./scss/_typography";
+
+// Navigation styles
+@import "./scss-elements/navigation";
+// Footer styles
+@import "./scss-elements/footer";
+
+@import "./scss-elements/_buttons";
+@import "./scss-elements/_button-arrow";
+@import "./scss-elements/_forms";
+@import "aos/dist/aos.css";
+
+// apos line-height interferance fix
+.apos-area,
+.apos-area-widget-inner,
+.apos-area-widget-wrapper,
+.apos-areas-widgets-list {
+  line-height: unset !important;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: $body-bg;
+  width: 100%;
+  margin: 0; // 1
+  font-family: $body-font-family;
+  @include font-size(1rem);
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: $body-color;
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+}
+
+a {
+  @include link-style;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+.widget-my-spacing {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.widget-py-spacing {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.highlight-primary {
+  color: $primary;
+}
+.highlight-secondary {
+  color: $secondary;
+}
+.highlight-tertiary {
+  color: $tertiary;
+}
+.highlight-black {
+  color: $black;
+}
+.highlight-white {
+  color: $white;
+}

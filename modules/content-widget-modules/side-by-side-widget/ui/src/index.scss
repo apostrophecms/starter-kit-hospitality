@@ -1,0 +1,18 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.side-by-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__column-item {
+    &.invert {
+      order: 1;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+    &__column-item {
+      width: 50%;
+    }
+  }
+}

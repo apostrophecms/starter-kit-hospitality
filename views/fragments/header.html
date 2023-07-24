@@ -1,0 +1,33 @@
+{% import "ui.html" as ui %}
+{% import "button.html" as buttonFrag %}
+
+{% fragment navigationBar(data) %}
+<div class="navigation container is-fluid">
+  <div class="navigation__logo-container">
+    <a href="/" class="navigation__logo">
+      {{ ui.image(data.global.logo) }}
+    </a>
+
+    <div class="navigation__menu-btn"></div>
+  </div>
+
+  <div class="navigation__nav-items">
+    <ul class="navigation__nav-links">
+      {% for nav in data.global.headerNav %}
+        {% set path = apos
+          .helper
+          .linkPath(nav) %}
+        <li>
+          <a href="{{ path }}" aria-label="{{ nav.ariaLabel }}">{{ nav.linkText }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <div class="navigation__user-items">
+      {% for btn in data.global.headerBtns %}
+        {% render buttonFrag.render(btn) %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfragment %}

@@ -1,24 +1,28 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
-{% extends data.outerLayout %}
 
+{% import 'fragments/header.html' as header %}
+{% import 'fragments/footer.html' as footer %}
+
+{% extends data.outerLayout %}
 {% set title = data.piece.title or data.page.title %}
 {% block title %}
-  {{ title }}
+  {{ data.global.title }}
   {% if not title %}
     {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
   {% endif %}
 {% endblock %}
 
 {% block beforeMain %}
-<div class="bp-wrapper">
-  <header class="bp-header">
-    <img class="bp-header__logo" src="/images/logo.png" alt="ApostropheCMS logo">
-    <nav class="bp-nav"></nav>
-    {% if not data.user %}
-      <a class="bp-button bp-header__login" href="/login">Login</a>
-    {% endif %}
-  </header>
-  <main class="bp-main">
+  {# Hospitality fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if apos.modules.settings.options.theme === 'marketing'%}
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  {% else %}
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+  {% endif %}
+  {% render header.navigationBar(data) %}
+
 {% endblock %}
 
 {% block main %}
@@ -30,16 +34,5 @@
 {% endblock %}
 
 {% block afterMain %}
-  </main>
-  <footer class="bp-footer">
-    <h3>Essential Links</h3>
-    <ul class="bp-footer__links">
-      <li><a href="https://apostrophecms.com/" target="_blank">About ApostropheCMS</a></li>
-      <li><a href="https://chat.apostrophecms.com/" target="_blank">Discord</a></li>
-      <li><a href="https://github.com/apostrophecms/apostrophe/tree/3.0" target="_blank">Github (3.0 branch)</a></li>
-      <li><a href="https://twitter.com/apostrophecms" target="_blank">Twitter</a></li>
-      <li><a href="https://forum.apostrophecms.org" target="_blank">Forum</a></li>
-    </ul>
-  </footer>
-</div>{# Close .bp-wrapper #}
+    {% render footer.footer(data) %}
 {% endblock %}

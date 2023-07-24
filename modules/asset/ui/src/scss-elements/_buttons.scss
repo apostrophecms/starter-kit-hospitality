@@ -1,0 +1,49 @@
+.btn,
+.my-form__submit {
+  padding: 1rem 2rem;
+  width: 100%;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color $animate-easing;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  &:hover {
+    color: $white;
+    background-color: bisque;
+    text-decoration: none;
+  }
+}
+
+.btn--sm {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+}
+
+.btn--lg {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.25rem;
+}
+
+.btn--primary,
+.my-form__submit {
+  background: $primary;
+  border: none;
+  color: $white;
+  &:hover {
+    color: $white;
+    background: lighten($primary, 5%);
+  }
+}
+
+.btn--secondary {
+  background: $secondary;
+  border: none;
+  color: $btn-secondary-text;
+  &:hover {
+    color: $primary;
+    background: lighten($secondary, 5%);
+  }
+}

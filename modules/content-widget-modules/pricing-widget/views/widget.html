@@ -1,0 +1,23 @@
+<section data-aos="{{ data.widget.animationEffects }}" class="pricing widget-py-spacing">
+  <div class="container">
+    {% area data.widget, 'intro' %}
+    <div class="cards">
+      {% for card in data.widget.cards %}
+        <div class="card card--pricing">
+          <div>
+            <div class="card__label">
+              {{ card.label }}
+            </div>
+            {% area card, 'content' %}
+            <ul class="card__feature-list">
+              {% for feature in card.features %}
+                <li>{{ feature.title }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% area card, 'buttons' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

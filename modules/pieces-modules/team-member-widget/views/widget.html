@@ -1,0 +1,10 @@
+<section data-aos="{{ data.widget.animationEffects }}" class="team-widget team-widget--{{ data.widget.style }} container widget-my-spacing">
+  {% for member in data.widget._teamMembers %}
+    <div class="team-widget__profile">
+      {% set profileImage = apos.image.first(member.profileImage) %}
+      <img class="team-widget__profile-image img-fluid" src="{{ apos.attachment.url(profileImage) }}" alt="{{ memeber.title }}">
+      <h3 class="team-widget__name">{{ member.title }}</h3>
+      <p class="team-widget__work-title">{{ member.workTitle }}</p>
+    </div>
+  {% endfor %}
+</section>

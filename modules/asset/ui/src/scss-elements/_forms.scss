@@ -1,0 +1,109 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.my-form {
+  // Form resets
+
+  &__fieldset,
+  &__input,
+  &__legend {
+    appearance: none;
+  }
+
+  &__fieldset,
+  &__input,
+  &__legend {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &__fieldset,
+  &__input,
+  &__legend {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  // Form element styling
+  &__input {
+    border: 1px solid $primary;
+    background-color: white;
+    border-radius: 0.25rem;
+    color: $primary;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.1rem rgba($primary, 50%);
+    }
+  }
+
+  &__input:not([type="checkbox"]):not([type="radio"]) {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  textarea#{&}__input {
+    min-height: 10rem;
+    resize: none;
+  }
+
+  &__input::placeholder {
+    opacity: 1; /* Firefox */
+    color: $primary;
+  }
+
+  select#{&}__input {
+    background: url("images/down-arrow.svg") no-repeat center right 0.75rem;
+  }
+
+  &__input[type="radio"],
+  &__input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+  }
+
+  &__input[type="radio"] {
+    border-radius: 50%;
+    &:checked {
+      background-image: radial-gradient($primary 40%, transparent calc(40% + 1px));
+    }
+  }
+
+  &__input[type="checkbox"]:checked {
+    background: $primary url("/images/checked-icon.svg") no-repeat center / 75% auto;
+  }
+
+  // Class assigned to button styling in modules/asset/ui/src/_buttons.scss
+  &__submit {
+    width: auto !important;
+  }
+
+  &__label,
+  &_label,
+  &__legend,
+  &__fieldset .apos-form-field-optional {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0.5rem;
+  }
+  &__fieldset {
+    .my-form__label {
+      margin: 0;
+    }
+  }
+  .apos-form-input,
+  .apos-form-fieldset {
+    margin-bottom: 1rem;
+  }
+  .my-form__check-wrapper + .my-form__check-wrapper {
+    margin-top: 0.5rem;
+  }
+}

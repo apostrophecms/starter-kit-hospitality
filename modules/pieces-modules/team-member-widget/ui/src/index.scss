@@ -1,0 +1,31 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.team-widget {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  grid-gap: 2rem;
+  justify-content: space-around;
+  @media only screen and (min-width: 900px) {
+    justify-content: center;
+    &--three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &--four-col {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  &__profile {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__profile-image {
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  &__work-title {
+    text-transform: uppercase;
+  }
+}

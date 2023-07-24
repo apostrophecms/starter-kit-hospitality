@@ -1,0 +1,35 @@
+{#
+  {% import "button.html" as buttonFrag %}
+  {% render buttonFrag.render(button) %}
+
+  * button - button object
+    ~ block
+    ~ alignment
+    ~ _id
+    ~ linkText
+    ~ linkTarget
+    ~ style
+    ~ size
+#}
+
+{% import "link.html" as link %}
+
+{% fragment render(button) %}
+  {% set path = apos.helper.linkPath(button) %}
+  {% set class = '' %}
+  {% if button.block %}
+    {% set class = class + ' btn-widget--block-' + button.block %}
+  {% endif %}
+  {% if button.alignment %}
+    {% set class = class + ' btn-widget--alignment-' + button.alignment %}
+  {% endif %}
+
+  <div class="btn-widget" id="{{ button._id }}">
+    {% render link.render({
+      label: button.linkText,
+      path: path,
+      target: button.linkTarget,
+      class: 'btn btn--' + button.style + ' btn--' + button.size
+    }) %}
+  </div>
+{% endfragment %}

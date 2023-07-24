@@ -1,0 +1,106 @@
+// Base colours
+$black: #000 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$white: #fff !default;
+$red: #dc3545 !default;
+$yellow: #ffc107 !default;
+$cyan: #0dcaf0 !default;
+$green: #198754 !default;
+
+// Theme colour variables
+$primary: $black !default;
+$secondary: $white !default;
+$tertiary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+// Themes color map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+) !default;
+
+// Gradients variables
+$gradient-dark: linear-gradient(180deg, $primary 0%, $secondary 100%);
+$gradient-light: linear-gradient(180deg, $white 0%, $primary 100%);
+
+// Box shadows
+$box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03) !default;
+$box-shadow-sm: 0px 4px 8px -2px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.06) !default;
+$box-shadow-lg: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03) !default;
+
+// Spacer variables map
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+// Body
+$body-color: $primary !default;
+$body-bg: $white !default;
+
+// Link
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+
+// Font settings
+$font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+  "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: "Abril Fatface", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+  monospace !default;
+
+$body-font-family: $font-family-sans-serif !default;
+
+// $font-size-base affects the font size of text
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 3 !default;
+$h2-font-size: $font-size-base * 2.5 !default;
+$h3-font-size: $font-size-base * 2 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$headings-margin-bottom: $spacer * 0.5 !default;
+$headings-font-family: $font-family-monospace !default;
+$headings-font-style: null !default;
+$headings-font-weight: null !default;
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
+
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
+
+$small-font-size: 0.875em !default;
+
+$border-radius: 5px !default;
+
+// Easing
+$animate-easing: 250ms ease 0s !default;

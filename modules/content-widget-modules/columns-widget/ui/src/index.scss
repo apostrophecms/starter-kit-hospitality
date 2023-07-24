@@ -1,0 +1,46 @@
+@use "sass:math";
+
+@import "../../../../asset/ui/src/scss/variables";
+
+.widget-columns {
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  &__column {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5%;
+
+    &__column {
+      &:not(:last-child) {
+        margin: 0;
+      }
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+
+    &--single .widget-columns__column {
+      width: 100%;
+    }
+
+    &--double .widget-columns__column {
+      width: 50%;
+    }
+
+    &--triple .widget-columns__column {
+      width: 33.3333%;
+    }
+    &--quadruple .widget-columns__column {
+      width: 25%;
+    }
+  }
+}

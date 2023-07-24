@@ -1,0 +1,31 @@
+{% set layout = data.widget.layout %}
+{% set style = data.widget.backgroundStyle %}
+
+{% if style === 'image' %}
+  {% set backgroundImage = apos.image.first(data.widget._backgroundImage) %}
+{% else %}
+  {% set backgroundColor = data.widget.backgroundColor %}
+{% endif %}
+
+<section 
+  data-aos="{{ data.widget.animationEffects }}"
+  class="
+    custom-form custom-form--{{ data.widget.fontColor }} custom-form--{{ layout }}
+    {{ 'container widget-my-spacing' if layout === 'column' else 'widget-py-spacing' }}
+  "
+  style="
+    {{ 'background-image: url(' + apos.attachment.url(backgroundImage, {size: 'max'}) + ')' if style === 'image' and layout === 'background' and backgroundImage  }}
+    {{ 'background: ' + backgroundColor + '' if style === 'color' and layout === 'background' }}
+  "
+>
+  <div class="{{ 'container' if layout === 'background' }} custom-form__column-item">
+      {% area data.widget, 'form' %}
+  </div>
+  {% if layout === 'column' and data.widget._backgroundImage.length %}
+    <div class="custom-form__column-item">
+      {% set image = apos.image.first(data.widget._backgroundImage) %}
+
+      <img class="img-fluid" src="{{ apos.attachment.url(image, {size: 'full'}) }}" alt="{{ image.title }}" >
+    </div>
+  {% endif %}
+</section>

@@ -1,0 +1,14 @@
+<section data-aos="{{ data.widget.animationEffects }}" data-accordion class="accordion container widget-my-spacing">
+  {% for item in data.widget.accordions %}
+    <div class="accordion__item" data-accordion-item>
+      <h3 class="accordion__heading h5">
+        <button class="accordion__button" data-accordion-button aria-expanded="false">
+          {{ item.title }} <span class="accordion__button-icon"></span>
+        </button>
+      </h3>
+      <div class="accordion__content" hidden data-accordion-detail>
+        {% area item, 'content' %}
+      </div>
+    </div>
+  {% endfor %}
+</section>

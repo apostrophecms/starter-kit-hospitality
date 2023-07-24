@@ -1,0 +1,39 @@
+{% import "ui.html" as ui %}
+
+{% fragment footer(data) %}
+<div class="footer container is-fluid widget-py-spacing">
+  <div class="footer__main">
+    <a href="/" class="footer__logo">
+      {{ ui.image(data.global.logo) }}
+    </a>
+
+    <div class="footer__nav-items">
+      <ul>
+        {% for nav in data.global.footerNav %}
+          {% set path = apos.helper.linkPath(nav) %}
+          <li>
+            <a href="{{ path }}" aria-label="{{ nav.ariaLabel }}">{{ nav.linkText }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer__social-items">
+      <ul>   
+        {% for social in data.global.social %}
+        <li>
+          <a aria-label="{{ social.icon }} link" target="_blank" href="{{ social.link }}">
+            <img src="/images/social-icons/{{ social.icon }}.svg" />
+          </a>
+        </li>
+        {% endfor %}     
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    <p><small>© {{ apos.modules.settings.options.year }}. All rights reserved by <a href="#">{{ data.global.title }}</a></small></p>
+  </div>
+
+</div>
+{% endfragment %}

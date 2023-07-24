@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
-    "build": "NODE_ENV=production node app @apostrophecms/asset:build",
+    "build": "bash ./scripts/heroku-release-tasks",
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
   },
@@ -40,8 +40,19 @@
   "author": "Alt Studios",
   "license": "MIT",
   "dependencies": {
+    "@apostrophecms/form": "^1.1.1",
+    "@apostrophecms/open-graph": "^1.2.1",
+    "@apostrophecms/seo": "^1.2.0",
+    "@apostrophecms/sitemap": "^1.0.2",
+    "aos": "^2.3.4",
     "apostrophe": "^3.0.0",
-    "normalize.css": "^8.0.1"
+    "dotenv": "^16.0.3",
+    "node-geocoder": "^4.2.0",
+    "normalize.css": "^8.0.1",
+    "ol": "^7.3.0",
+    "photoswipe": "^5.3.7",
+    "rfs": "^10.0.0",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
     "eslint": "^7.16.0",

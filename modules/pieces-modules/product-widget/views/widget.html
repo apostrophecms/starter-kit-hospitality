@@ -1,0 +1,14 @@
+{% set splitClass = 'split' if data.widget.style === 'split'%}
+<section data-aos="{{ data.widget.animationEffects }}" class="menu container widget-my-spacing">
+  {% area data.widget, 'headingIntro' %}
+
+  <div class="menu__list {{ splitClass }}">
+    {% for item in data.widget._menuItems %}
+      <div class="menu__item {{ splitClass }}">
+        <div class="menu__item__title h6">{{ item.title }} <span>{{ data.widget.currencySybmol }}{{ item.price }}</span></div>
+        <div class="menu__item__description">{{ item.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
