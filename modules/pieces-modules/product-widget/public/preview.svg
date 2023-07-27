@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="209px" height="135px" viewBox="0 0 209 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy 8</title>
+    <g id="Artboard-Copy-8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F9F9F9" x="0" y="0" width="209" height="135"></rect>
+        <g id="Group" transform="translate(15, 18.941)">
+            <line x1="0.402022616" y1="6.85443418" x2="66.3358042" y2="6.85443418" id="Line-Copy-11" stroke="#6466F1" stroke-width="6.12" stroke-linecap="round" stroke-linejoin="bevel"></line>
+            <line x1="0.402022616" y1="21.8284639" x2="124.498305" y2="21.8284639" id="Line-Copy-12" stroke="#BBBBBB" stroke-width="4.59" stroke-linecap="round" stroke-linejoin="bevel"></line>
+            <line x1="0.402022616" y1="32.3102847" x2="106.1312" y2="32.3102847" id="Line-Copy-13" stroke="#BBBBBB" stroke-width="4.59" stroke-linecap="round" stroke-linejoin="bevel"></line>
+            <text id="$$" font-family="SFProDisplay-Black, SF Pro Display" font-size="9.18" font-weight="700" letter-spacing="0.655714273" fill="#6466F1">
+                <tspan x="113.020736" y="9">$$</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy-2" transform="translate(15, 77.941)">
+            <line x1="0.402022616" y1="6.85443418" x2="66.3358042" y2="6.85443418" id="Line-Copy-11" stroke="#6466F1" stroke-width="6.12" stroke-linecap="round" stroke-linejoin="bevel"></line>
+            <line x1="0.402022616" y1="21.8284639" x2="124.498305" y2="21.8284639" id="Line-Copy-12" stroke="#BBBBBB" stroke-width="4.59" stroke-linecap="round" stroke-linejoin="bevel"></line>
+            <line x1="0.402022616" y1="32.3102847" x2="106.1312" y2="32.3102847" id="Line-Copy-13" stroke="#BBBBBB" stroke-width="4.59" stroke-linecap="round" stroke-linejoin="bevel"></line>
+            <text id="$$$" font-family="SFProDisplay-Black, SF Pro Display" font-size="9.18" font-weight="700" letter-spacing="0.655714273" fill="#6466F1">
+                <tspan x="107.020736" y="9">$$$</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy" transform="translate(168, 19)" stroke-linecap="round" stroke-linejoin="bevel">
+            <line x1="0.402022616" y1="6.79544799" x2="66.3358042" y2="6.79544799" id="Line-Copy-11" stroke="#6466F1" stroke-width="6.12"></line>
+            <line x1="0.402022616" y1="21.7694777" x2="124.498305" y2="21.7694777" id="Line-Copy-12" stroke="#BBBBBB" stroke-width="4.59"></line>
+            <line x1="0.402022616" y1="32.2512985" x2="106.1312" y2="32.2512985" id="Line-Copy-13" stroke="#BBBBBB" stroke-width="4.59"></line>
+        </g>
+        <g id="Group-Copy-3" transform="translate(168, 78)" stroke-linecap="round" stroke-linejoin="bevel">
+            <line x1="0.402022616" y1="6.79544799" x2="66.3358042" y2="6.79544799" id="Line-Copy-11" stroke="#6466F1" stroke-width="6.12"></line>
+            <line x1="0.402022616" y1="21.7694777" x2="124.498305" y2="21.7694777" id="Line-Copy-12" stroke="#BBBBBB" stroke-width="4.59"></line>
+            <line x1="0.402022616" y1="32.2512985" x2="106.1312" y2="32.2512985" id="Line-Copy-13" stroke="#BBBBBB" stroke-width="4.59"></line>
+        </g>
+    </g>
+</svg>

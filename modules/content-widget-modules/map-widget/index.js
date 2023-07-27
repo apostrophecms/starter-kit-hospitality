@@ -6,7 +6,9 @@ module.exports = {
   options: {
     // geocoder options can be include inside the main map-widget reference located in the /modules/content-widget-modules/modules.js file
     label: 'Map',
-    icon: 'map-icon'
+    icon: 'map-icon',
+    description: 'Add a map to your page',
+    previewImage: 'jpg'
   },
   icons: {
     'map-icon': 'Map'

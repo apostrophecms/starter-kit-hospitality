@@ -5,7 +5,9 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Product Menu',
-    icon: 'list-icon'
+    icon: 'list-icon',
+    description: 'Display a product menu on your page',
+    previewImage: 'svg'
   },
   icons: {
     'list-icon': 'FormatListChecks'

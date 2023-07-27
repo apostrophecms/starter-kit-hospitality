@@ -6,7 +6,9 @@ module.exports = {
   options: {
     label: 'Call to action',
     icon: 'gesture-tap-button-icon',
-    placeholderUrl: '/modules/@apostrophecms/image-widget/placeholder.jpg'
+    placeholderUrl: '/modules/@apostrophecms/image-widget/placeholder.jpg',
+    description: 'Add a large hero image with a call to action to your page',
+    previewImage: 'jpg'
   },
   init(self) {
     self.determineBestAssetUrl('placeholder');

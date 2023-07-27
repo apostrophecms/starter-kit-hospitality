@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="209px" height="135px" viewBox="0 0 209 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy</title>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F9F9F9" x="0" y="0" width="209" height="135"></rect>
+        <rect id="Rectangle-Copy" stroke="#BBBBBB" stroke-width="2.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" x="25.3371474" y="9.04226795" width="158" height="19" rx="2.5"></rect>
+        <rect id="Rectangle-Copy-2" stroke="#BBBBBB" stroke-width="2.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" x="25.3371474" y="35.0422679" width="158" height="19" rx="2.5"></rect>
+        <rect id="Rectangle-Copy-4" stroke="#BBBBBB" stroke-width="2.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" x="25.3371474" y="117.042268" width="158" height="19" rx="2.5"></rect>
+        <rect id="Rectangle-Copy-3" stroke="#6466F1" stroke-width="2.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" x="25.3371474" y="61.0422679" width="158" height="49" rx="2.5"></rect>
+        <polygon id="Mask" fill="#BBBBBB" fill-rule="nonzero" points="165.443548 16.1497696 164.209677 17.4317134 167.5 20.8502304 170.790323 17.4317134 169.556452 16.1497696 167.5 18.2863427"></polygon>
+        <polygon id="Mask-Copy" fill="#BBBBBB" fill-rule="nonzero" points="165.443548 42.1497696 164.209677 43.4317134 167.5 46.8502304 170.790323 43.4317134 169.556452 42.1497696 167.5 44.2863427"></polygon>
+        <polygon id="Mask-Copy-3" fill="#BBBBBB" fill-rule="nonzero" points="165.443548 124.14977 164.209677 125.431713 167.5 128.85023 170.790323 125.431713 169.556452 124.14977 167.5 126.286343"></polygon>
+        <polygon id="Mask-Copy-2" fill="#6466F1" fill-rule="nonzero" transform="translate(167.5, 71.5) rotate(-90) translate(-167.5, -71.5)" points="165.443548 69.1497696 164.209677 70.4317134 167.5 73.8502304 170.790323 70.4317134 169.556452 69.1497696 167.5 71.2863427"></polygon>
+        <line x1="35.5" y1="18.5" x2="101.5" y2="18.5" id="Line" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+        <line x1="35.5" y1="44.5" x2="101.5" y2="44.5" id="Line-Copy" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+        <line x1="35.5" y1="126.5" x2="101.5" y2="126.5" id="Line-Copy-6" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+        <line x1="35.5" y1="71.5" x2="101.5" y2="71.5" id="Line-Copy-2" stroke="#6466F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+        <line x1="35.5" y1="80.5" x2="120" y2="81" id="Line-Copy-3" stroke="#6466F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+        <line x1="35.5" y1="89.5" x2="136" y2="90" id="Line-Copy-4" stroke="#6466F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+        <line x1="35.5" y1="98.5" x2="86" y2="99" id="Line-Copy-5" stroke="#6466F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"></line>
+    </g>
+</svg>

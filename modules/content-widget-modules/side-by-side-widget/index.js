@@ -5,7 +5,9 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Side by side',
-    icon: 'layout-side-icon'
+    icon: 'layout-side-icon',
+    description: 'Display two sections of content side by side',
+    previewImage: 'jpg'
   },
   icons: {
     'layout-side-icon': 'PageLayoutSidebarRight'
