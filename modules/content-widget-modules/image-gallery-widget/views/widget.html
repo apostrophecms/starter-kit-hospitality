@@ -6,12 +6,15 @@
     <div class="swiper-wrapper" itemscope itemtype="http://schema.org/ImageGallery">
       {% for image in data.widget._images %}
         {% set background = apos.image.first(image) %}
+        {% set maxUrl = apos.attachment.url(background, {size: 'max' }) %}
+        {% set ext = apos.helper.fileExtension(maxUrl) %}
 
         <div id="{{ image._id }}" class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a
             itemprop="contentUrl"
-            href="{{ apos.attachment.url(background, {size: 'max' }) }}"
+            href="{{ maxUrl }}"
             target="_blank"
+            class="image-gallery__{{ ext }}"
           >
             <img
               src="{{ apos.attachment.url(background, {size: 'full' }) }}"
