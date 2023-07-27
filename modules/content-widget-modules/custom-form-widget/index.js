@@ -4,7 +4,9 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Custom Form',
-    icon: 'form-icon'
+    icon: 'form-icon',
+    description: 'Display a an interactive form on your page',
+    previewImage: 'svg'
   },
   icons: {
     'form-icon': 'FormDropdown'

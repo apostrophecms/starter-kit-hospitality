@@ -5,7 +5,9 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Pricing',
-    icon: 'cards-icon'
+    icon: 'cards-icon',
+    description: 'Display pricing cards on your page',
+    previewImage: 'svg'
   },
   icons: {
     'cards-icon': 'Cards'

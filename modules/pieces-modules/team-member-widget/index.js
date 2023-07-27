@@ -4,7 +4,9 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Team Members',
-    icon: 'teams-icon'
+    icon: 'teams-icon',
+    description: 'Display team members on your page',
+    previewImage: 'svg'
   },
   icons: {
     'teams-icon': 'AccountMultiplePlus'

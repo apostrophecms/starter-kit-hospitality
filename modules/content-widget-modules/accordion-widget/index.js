@@ -5,7 +5,9 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Accordion',
-    icon: 'menu-open-icon'
+    icon: 'menu-open-icon',
+    description: 'Add expandable content to your page',
+    previewImage: 'svg'
   },
   icons: {
     'menu-open-icon': 'MenuOpen'

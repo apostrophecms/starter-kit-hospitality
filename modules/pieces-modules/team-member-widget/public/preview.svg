@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="209px" height="135px" viewBox="0 0 209 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy 9</title>
+    <g id="Artboard-Copy-9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F9F9F9" x="0" y="0" width="209" height="135"></rect>
+        <circle id="Oval" fill="#BBBBBB" cx="39" cy="46" r="22"></circle>
+        <circle id="Oval-Copy" fill="#6466F1" cx="105" cy="46" r="22"></circle>
+        <circle id="Oval-Copy-2" fill="#BBBBBB" cx="171" cy="46" r="22"></circle>
+        <g id="Group" transform="translate(29, 37)" fill="#F9F9F9" fill-rule="nonzero">
+            <path d="M76,0 C78.7614237,0 81,2.23857625 81,5 C81,7.76142375 78.7614237,10 76,10 C73.2385763,10 71,7.76142375 71,5 C71,2.23857625 73.2385763,0 76,0 M76,12 C81.525,12 86,14.3866667 86,17.3333333 L86,20 L66,20 L66,17.3333333 C66,14.3866667 70.475,12 76,12 Z" id="Shape"></path>
+            <path d="M142,0 C144.761424,0 147,2.23857625 147,5 C147,7.76142375 144.761424,10 142,10 C139.238576,10 137,7.76142375 137,5 C137,2.23857625 139.238576,0 142,0 M142,12 C147.525,12 152,14.3866667 152,17.3333333 L152,20 L132,20 L132,17.3333333 C132,14.3866667 136.475,12 142,12 Z" id="Shape-Copy"></path>
+            <path d="M10,0 C12.7614237,0 15,2.23857625 15,5 C15,7.76142375 12.7614237,10 10,10 C7.23857625,10 5,7.76142375 5,5 C5,2.23857625 7.23857625,0 10,0 M10,12 C15.525,12 20,14.3866667 20,17.3333333 L20,20 L0,20 L0,17.3333333 C0,14.3866667 4.475,12 10,12 Z" id="Shape-Copy-2"></path>
+        </g>
+        <g id="Group-2" transform="translate(17, 83)" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="4.59">
+            <line x1="3.3182679" y1="0.748701486" x2="40.6041667" y2="0.479223777" id="Line-Copy-14"></line>
+            <line x1="9.31925325" y1="12.7487015" x2="35.6029412" y2="12.4792238" id="Line-Copy-15"></line>
+            <line x1="0.315874912" y1="24.7487015" x2="43.6071429" y2="24.4792238" id="Line-Copy-16"></line>
+        </g>
+        <g id="Group-3" transform="translate(83, 83)" stroke="#6466F1" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="4.59">
+            <line x1="3.3182679" y1="0.748701486" x2="40.6041667" y2="0.479223777" id="Line-Copy-17"></line>
+            <line x1="9.31925325" y1="12.7487015" x2="35.6029412" y2="12.4792238" id="Line-Copy-18"></line>
+            <line x1="0.315874912" y1="24.7487015" x2="43.6071429" y2="24.4792238" id="Line-Copy-19"></line>
+        </g>
+        <g id="Group-4" transform="translate(149, 83)" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="4.59">
+            <line x1="3.3182679" y1="0.748701486" x2="40.6041667" y2="0.479223777" id="Line-Copy-22"></line>
+            <line x1="9.31925325" y1="12.7487015" x2="35.6029412" y2="12.4792238" id="Line-Copy-21"></line>
+            <line x1="0.315874912" y1="24.7487015" x2="43.6071429" y2="24.4792238" id="Line-Copy-20"></line>
+        </g>
+    </g>
+</svg>

@@ -4,6 +4,8 @@ module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Image Gallery',
+    description: 'Add a gallery of images to your page',
+    previewImage: 'jpg',
     icon: 'image-gallery-icon'
   },
   icons: {
