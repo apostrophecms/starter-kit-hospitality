@@ -7,14 +7,12 @@ module.exports = {
   },
   fields: {
     add: {
-      image: {
-        type: 'area',
+      _image: {
+        type: 'relationship',
+        withType: '@apostrophecms/image',
         label: 'Image',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          }
-        }
+        required: true,
+        max: 1
       },
       ...aosSchema
     }
