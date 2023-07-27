@@ -1,6 +1,6 @@
-@import "../../../../asset/ui/src/scss/variables";
-@import "swiper/swiper-bundle.css";
-@import "photoswipe/photoswipe.css";
+@import '../../../../asset/ui/src/scss/variables';
+@import 'swiper/swiper-bundle.css';
+@import 'photoswipe/photoswipe.css';
 
 // Main Swiper Gallery loaded on the page
 .image-gallery {
@@ -11,9 +11,10 @@
     }
 
     a {
-      min-width: 70%;
+      min-width: 30%;
+      width: auto;
     }
-    
+
     .swiper-slide {
       display: flex;
       justify-content: center;
