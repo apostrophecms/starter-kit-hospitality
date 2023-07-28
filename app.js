@@ -1,9 +1,7 @@
 require('dotenv').config();
 
-const theme = process.env.theme || 'hospitality';
-
 require('apostrophe')({
-  shortName: process.env.APOS_BASE_URL ? `apos-theme-${theme}` : 'apos-theme',
+  shortName: 'starter-kit-hospitality',
   baseUrl: process.env.APOS_BASE_URL || 'http://localhost:3000',
   nestedModuleSubdirs: true,
   modules: {
@@ -53,7 +51,7 @@ require('apostrophe')({
 
     '@apostrophecms/sitemap': {
       options: {
-        excludeTypes: ['team-member', 'product']
+        excludeTypes: [ 'team-member', 'product' ]
       }
     },
     '@apostrophecms/seo': {},

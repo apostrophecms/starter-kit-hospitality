@@ -1,53 +1,46 @@
-# Apostrophe Theme
+# Hospitality & Restaurant Starter Kit
+A starter kit for building hospitality and restaraunt-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for Apostrophe 3.
 
 ## Get started
 
 Install dependencies: `npm install`
 
 ## Create Admin user
+```bash
 node app @apostrophecms/user:add admin admin
+```
 
-## Theming set up details
+## Theming
 
-To make use of theming, you must update the theme value (preset to the 'hospitality' theme):
+Colors, fonts, and other aesthetic variables are set in `modules/asset/ui/src/scss/_theme.scss`. These can be overridden by making changes directly in the `_theme.scss` file.
 
--  Within the app.js file (for setting a .env please see: 'Making use of the .env set up' section in this readme):
-    ```
-    const theme = process.env.theme || 'hospitality';
-    ```
-      The above variable is applied as the shortName value for the database naming:
-    ```
-      shortName: process.env.APOS_BASE_URL ? `apos-theme-${theme}` : 'apos-theme',
-    ```
-      , as well as being passed through a settings module which allows for the value to be used within the nunjuck templates as:
-    ```
-      {{ apos.modules.settings.options.theme }}
-    ```
-      or in a conditional as:
-    ```
-      {% if apos.modules.settings.options.theme === 'marketing' %}
-       ...
-      {% endif %}
-    ```
+The hospitality starter kit uses fonts provided by Google. These are imported into the primary layout file in `views/layout.html:19`
 
-- Font types to use (File location: views/layout.html, inside the {% beforeMain %} nunjucks tag):
-    ```
-    {% if apos.modules.settings.options.theme === 'marketing'%}
-      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    {% else %}
-      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-    {% endif %}
-    ```
+## Maps and Geocoding
+This project comes with a map widget that geocodes addresses to points on the map. Geocoding is provided by [`node-geocoder`](https://www.npmjs.com/package/node-geocoder). You must configure a geocoding service provider and API key in order to use it. [See a list of geocoding service providers](https://github.com/nchaulet/node-geocoder#geocoder-providers-in-alphabetical-order).
 
-- Apply the themed SCSS Style sheet (file location: modules/asset/ui/src/scss/_theme.scss).
+To configure your project's geocoding service provider see `modules/content-widget-modules/modules.js`
 
-  *NB: The themed SCSS Style sheet values are not controlled by the .env THEME variable setting and have to be change within the _theme.scss file
-  
-  To apply a themes styling, you will uncomment the theme scss @import reference, and comment out any other @imports, see example below:
-    ```
-    @import "./_theme-hospitality";
-    // @import "./_theme-marketing";
-    ```
+```js
+  'map-widget': {
+    options: {
+      geocoderSettings: {
+        // For a full list of the node-geocoder npm package options please view the modules documentation - https://www.npmjs.com/package/node-geocoder
+        // Requred
+        provider: 'mapbox',
+
+        // Optional depending on the providers
+        apiKey: process.env.GEOCODER_API_KEY, // for Mapquest, OpenCage, Google Premier
+        formatter: null, // 'gpx', 'string', ...
+        minConfidence: 0.5,
+        limit: 1
+      }
+    }
+  },
+
+```
+
+More configuration details for `node-geocoder` [noted here](#node-geocoder-config).
 
 ## Making use of the .env set up
 
@@ -58,7 +51,6 @@ There is a .env.sample file locate within the top level directory. To set up the
 
 Next, these varibles need to have values set:
 
-THEME= value should be either hospitality or marketing, depending on the theme you wish to apply
 GEOCODER_API_KEY= must be the value of the geocoder provider
 
 ## Running the project
@@ -90,13 +82,12 @@ The below Apostrophecms extensions have been included within this themes main ap
 - [ ] **dotenv.** "dotenv" is a npm package that loads environment variables from a .env file. It's useful for securely storing sensitive information like API keys, passwords, and other configuration settings.
 
     The import statement should only be set within the main apostrophecms app.js file:
-    ```
+    ```js
     require('dotenv').config();
-    
     ```
     You can then reference environment variables within the server js files for apostrophe,
     
-    ```
+    ```js
     const port = process.env.PORT || 3000;
     const dbHost = process.env.DB_HOST || 'localhost';
     const dbUser = process.env.DB_USER;
@@ -114,11 +105,11 @@ The below Apostrophecms extensions have been included within this themes main ap
 - [ ] **swiper (Slideshows).** The "swiper" package is a JavaScript library for creating responsive and touch-enabled sliders, carousels, and other interactive content on the web. It's usage within this theme is located at modules/content-widget-modules/image-gallery-widget
 
     You can import it in your JavaScript file using the import statement:
-    ```
+    ```js
     import Swiper from 'swiper/bundle';
     ```
     Then, you can create a new instance of the "swiper" class and pass in a configuration object with your desired options. For example:
-    ```
+    ```js
     const mySwiper = new Swiper('.swiper-container', {
       // Optional parameters
       direction: 'horizontal',
@@ -139,12 +130,12 @@ The below Apostrophecms extensions have been included within this themes main ap
     
     You can import it in your JavaScript file using the import statement:
     
-    ```
+    ```js
     import PhotoSwipeLightbox from 'photoswipe/lightbox';
     import PhotoSwipe from 'photoswipe';
     ```
     Then, you can create a new instance of the "Photoswiper lightbox" class and pass in a configuration object with your desired options. For example:
-    ```
+    ```js
     // Photoswiper lightbox and gallery
     const photoSwipeOptions = {
         gallery: '#imageGallery',
@@ -172,14 +163,14 @@ The below Apostrophecms extensions have been included within this themes main ap
     lightbox.init();
     ```
 
-- [ ] **Node-geocoder** is an npm package that simplifies geocoding and reverse-geocoding in Node.js. It supports various geocoding services, allowing developers to convert addresses to coordinates and vice versa with ease.
+- [ ] [**Node-geocoder**](#node-geocoder-config) is an npm package that simplifies geocoding and reverse-geocoding in Node.js. It supports various geocoding services, allowing developers to convert addresses to coordinates and vice versa with ease.
 
     See a basic example of this package below:
-    ```
+    ```js
     const NodeGeocoder = require('node-geocoder');
     ```
     Then, you can create a new instance of the "Map" class and add one or more layers to it. For example:
-    ```
+    ```js
     const options = {
       // For a full list of the node-geocoder npm package options please view the modules documentation - https://www.npmjs.com/package/node-geocoder
       // Requred
@@ -198,13 +189,13 @@ The below Apostrophecms extensions have been included within this themes main ap
 - [ ] **ol (Maps)** The "ol" package is a JavaScript library for creating interactive maps on the web. It's usage within this theme is located at modules/content-widget-modules/map-widget
 
     See a basic example of this package below:
-    ```
+    ```js
     import { Map, View } from 'ol';
     import TileLayer from 'ol/layer/Tile';
     import OSM from 'ol/source/OSM';
     ```
     Then, you can create a new instance of the "Map" class and add one or more layers to it. For example:
-    ```
+    ```js
     const map = new Map({
       target: 'map',
       layers: [
@@ -223,18 +214,18 @@ The below Apostrophecms extensions have been included within this themes main ap
 
     You can import it in your JavaScript file (modules/asset/ui/src/index.js) using the import statement:
     
-    ```
+    ```js
     import AOS from 'aos';
     ```
     Then, initialize AOS. For example:
     
-    ```
+    ```js
     AOS.init();
     ```
     
     For usage within this theme, Create an instance of 'aosSchema' in your widget and add as field. For example:
     
-    ```
+    ```js
     const aosSchema = require('../../../lib/aosSchema.js');
     
     add: {
@@ -242,6 +233,10 @@ The below Apostrophecms extensions have been included within this themes main ap
     }
     ```
 
-## You really want the docs
+## Advanced Apostrophe configuration
 
-Right now, [all the juicy info is in the A3 docs](https://a3.docs.apostrophecms.org), so head over there and start reading! This boilerplate project is a fun introduction to the UI, but you'll want to know more to really try it out.
+Right now, [all the juicy info is in the A3 docs](https://v3.docs.apostrophecms.org), so head over there and start reading! This starter kit project is a fun introduction to the UI, but you'll want to know more to really try it out.
+
+## Thank you
+Thank you to our collaborating partner [Hellocomputer](https://www.hellocomputer.com) for bringing this starter kit to life.
+![A collaboration between Apostrophe Technologies and Hellocomputer](thanks.png)
