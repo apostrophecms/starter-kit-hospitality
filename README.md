@@ -235,7 +235,7 @@ The below Apostrophecms extensions have been included within this themes main ap
 
 ## Advanced Apostrophe configuration
 
-Right now, [all the juicy info is in the A3 docs](https://v3.docs.apostrophecms.org), so head over there and start reading! This boilerplate project is a fun introduction to the UI, but you'll want to know more to really try it out.
+Right now, [all the juicy info is in the A3 docs](https://v3.docs.apostrophecms.org), so head over there and start reading! This starter kit project is a fun introduction to the UI, but you'll want to know more to really try it out.
 
 ## Thank you
 Thank you to our collaborating partner [Hellocomputer](https://www.hellocomputer.com) for bringing this starter kit to life.
