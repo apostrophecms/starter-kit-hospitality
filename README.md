@@ -1,4 +1,4 @@
-# Hospitality & Restaraunt Starter Kit
+# Hospitality & Restaurant Starter Kit
 A starter kit for building hospitality and restaraunt-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for Apostrophe 3.
 
 ## Get started
