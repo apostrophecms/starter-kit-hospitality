@@ -4,13 +4,6 @@ module.exports = {
   },
   init(self) {
     self.addHelpers({
-      fileExtension: (file) => {
-        if (!file) {
-          return;
-        }
-        const ext = file.split('.').pop();
-        return ext;
-      },
       linkPath: (link) => {
         if (!link) {
           return;
