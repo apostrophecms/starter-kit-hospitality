@@ -40,7 +40,7 @@ To configure your project's geocoding service provider see `modules/content-widg
 
 ```
 
-More configuration details for `node-geocoder` [noted here](#node-geocoder-config)
+More configuration details for `node-geocoder` [noted here](#node-geocoder-config).
 
 ## Making use of the .env set up
 
