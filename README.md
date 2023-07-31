@@ -1,5 +1,5 @@
 # Hospitality & Restaurant Starter Kit
-A starter kit for building hospitality and restaraunt-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for Apostrophe 3.
+A starter kit for building hospitality and restaurant-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for Apostrophe 3.
 
 ## Get started
 
@@ -44,18 +44,18 @@ More configuration details for `node-geocoder` [noted here](#node-geocoder-confi
 
 ## Making use of the .env set up
 
-There is a .env.sample file locate within the top level directory. To set up the .env file:
+There is a `.env.sample` file located within the top-level directory. To set up the `.env` file:
 
- - Either rename this file to .env or,
- - Add a new file named .env and copy the contents from .env.sample
+ - Either rename this file to `.env` or,
+ - Add a new file named `.env` and copy the contents from `.env.sample`
 
-Next, these varibles need to have values set:
+Next, these variables need to have values set:
 
 GEOCODER_API_KEY= must be the value of the geocoder provider
 
 ## Running the project
 
-Run `npm run dev` to build the Apostrophe UI and start the site up. Remember, this is during alpha development, so we're all in "dev mode." The `dev` script will watch for saves in client-side CSS and Javascript and trigger a build and page refresh if they are detected. It will also restart the app when server-side code is saved.
+Run `npm run dev` to build the Apostrophe UI and start the site up. Remember, this is during alpha development, so we're all in "dev mode." The `dev` script will watch for saves in client-side CSS and Javascript and trigger a build and page refresh if they are detected. It will also restart the app when the server-side code is saved.
 
 ## Making it your own
 
@@ -67,7 +67,7 @@ This boilerplate is designed so you can install and start running it right away.
 - [ ] **Update the `className` options in `app.js`.** This option is set for core widget types to provide CSS styling hooks. It is namespaced with `bp-` for "boilerplate." You will likely want to update that to match your general CSS class naming practices.
 
 ## Apostrophecms module extensions
-The below Apostrophecms extensions have been included within this themes main apostrophecms app.js file.
+The below Apostrophecms extensions have been included within this theme's main apostrophecms `app.js` file.
 
 - [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
 (View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
@@ -95,14 +95,14 @@ The below Apostrophecms extensions have been included within this themes main ap
     ```
 - [ ] **rfs (Responsive Font Sizing).** The "rfs" package is a node.js module that provides a simple way to create responsive and fluid typography in CSS. It allows you to define font sizes using a unitless value (usually "rem") and automatically adjust them based on the viewport or container width. 
 
-    Mainly used within modules/asset/ui/src/_typography.scss file for consistent rem based font sizing. Usage applied to headings and paragraphs.
+    Mainly used within `modules/asset/ui/src/_typography.scss` file for consistent rem based font sizing. Usage applied to headings and paragraphs.
     
     E.g ``` @include font-size($h1-font-size)```
     where $h1-font-size is a rem value determined by a base value.
     
     in this theme a default of 16px: ```$h1-font-size: $font-size-base * 3; // 48px```
 
-- [ ] **swiper (Slideshows).** The "swiper" package is a JavaScript library for creating responsive and touch-enabled sliders, carousels, and other interactive content on the web. It's usage within this theme is located at modules/content-widget-modules/image-gallery-widget
+- [ ] **swiper (Slideshows).** The "swiper" package is a JavaScript library for creating responsive and touch-enabled sliders, carousels, and other interactive content on the web. Its usage within this theme is located at modules/content-widget-modules/image-gallery-widget
 
     You can import it in your JavaScript file using the import statement:
     ```js
@@ -124,9 +124,9 @@ The below Apostrophecms extensions have been included within this themes main ap
       // And more...
     });
     ```
-- [ ] **photoswipe (Lightbox)** "PhotoSwipe Lightbox" is a plugin for the popular JavaScript library "PhotoSwipe" that simplifies the process of creating responsive image galleries with lightbox functionality. It offers an easy-to-use API for adding lightboxes to your images, and is highly customizable and flexible.
+- [ ] **photoswipe (Lightbox)** "PhotoSwipe Lightbox" is a plugin for the popular JavaScript library "PhotoSwipe" that simplifies the process of creating responsive image galleries with lightbox functionality. It offers an easy-to-use API for adding lightboxes to your images and is highly customizable and flexible.
 
-    It's usage within this theme is located at modules/content-widget-modules/image-gallery-widget, and is applied in conjunction with the swiper npm package.
+    Its usage within this theme is located at `modules/content-widget-modules/image-gallery-widget`, and is applied in conjunction with the swiper npm package.
     
     You can import it in your JavaScript file using the import statement:
     
@@ -186,7 +186,7 @@ The below Apostrophecms extensions have been included within this themes main ap
     const geocoderAddress = await geocoder.geocode(data.widget.address);
     ```
 
-- [ ] **ol (Maps)** The "ol" package is a JavaScript library for creating interactive maps on the web. It's usage within this theme is located at modules/content-widget-modules/map-widget
+- [ ] **ol (Maps)** The "ol" package is a JavaScript library for creating interactive maps on the web. Its usage within this theme is located at `modules/content-widget-modules/map-widget`
 
     See a basic example of this package below:
     ```js
@@ -210,9 +210,9 @@ The below Apostrophecms extensions have been included within this themes main ap
     });
     ```
 
-- [ ] **AOS (Animations)** Animate On Scroll (AOS) library allows you to animate elements as you scroll down and up. If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.
+- [ ] **AOS (Animations)** Animate On Scroll (AOS) library allows you to animate elements as you scroll down and up. If you scroll back to top, elements will animate to their previous state and are ready to animate again if you scroll down.
 
-    You can import it in your JavaScript file (modules/asset/ui/src/index.js) using the import statement:
+    You can import it in your JavaScript file (`modules/asset/ui/src/index.js`) using the import statement:
     
     ```js
     import AOS from 'aos';
@@ -223,7 +223,7 @@ The below Apostrophecms extensions have been included within this themes main ap
     AOS.init();
     ```
     
-    For usage within this theme, Create an instance of 'aosSchema' in your widget and add as field. For example:
+    For usage within this theme, Create an instance of 'aosSchema' in your widget and add it as a field. For example:
     
     ```js
     const aosSchema = require('../../../lib/aosSchema.js');
@@ -237,6 +237,18 @@ The below Apostrophecms extensions have been included within this themes main ap
 
 Right now, [all the juicy info is in the A3 docs](https://v3.docs.apostrophecms.org), so head over there and start reading! This starter kit project is a fun introduction to the UI, but you'll want to know more to really try it out.
 
-## Thank you
-Thank you to our collaborating partner [Hellocomputer](https://www.hellocomputer.com) for bringing this starter kit to life.
-![A collaboration between Apostrophe Technologies and Hellocomputer](thanks.png)
+## Thanks
+![Thanks to our partner Hellocomputer](https://static.apostrophecms.com/apostrophecms/starter-kit-hellocomputer/images/thanks.png)
+
+### About Apostrophe
+ApostropheCMS is a powerful content management system designed for developers who want to build dynamic and robust websites and applications. The intuitive admin interface provides a user-friendly editing experience, empowering content editors to create and update content effortlessly. As a developer, you have complete control over the content structure, defining custom schemas, and creating relationships between different content types.
+
+With its developer-friendly architecture, ApostropheCMS provides the flexibility and extensibility you need to build a simple blog, an enterprise-level website, or a complex web application.
+
+
+## Apostrophe starter kits
+This Starter Kit was originally crafted by Hellocomputer in partnership with Apostrophe. To learn more about Hellocomputer visit [hellocomputer.com](https://www.hellocomputer.com/). As with any open-source project, this too is a community collaboration. We welcome feedback, tickets, bug fixes, and improvements.
+
+Want to upgrade your Starter Kit to Apostrophe Pro? [Get started here](https://apostrophecms.com/pro).
+
+Interested in publishing an Apostrophe Starter Kit and becoming a featured Apostrophe Partner? [Submit a Starter Kit](https://apostrophecms.com/starter-kits).
