@@ -1,6 +1,10 @@
 # Hospitality & Restaurant Starter Kit
 A starter kit for building hospitality and restaurant-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for Apostrophe 3.
 
+## Demo
+<video src="https://user-images.githubusercontent.com/1889830/257870507-bf10cd61-579d-4179-98e6-c3c8baf355d1.mp4" controls="controls" style="max-width: 730px;">
+</video>
+
 ## Get started
 
 Install dependencies: `npm install`
