@@ -45,7 +45,7 @@
     "@apostrophecms/seo": "^1.2.0",
     "@apostrophecms/sitemap": "^1.0.2",
     "aos": "^2.3.4",
-    "apostrophe": "^3.0.0",
+    "apostrophe": "^3.53.0",
     "dotenv": "^16.0.3",
     "node-geocoder": "^4.2.0",
     "normalize.css": "^8.0.1",
