@@ -16,19 +16,15 @@ require('apostrophe')({
     // ***********************************************************************
     // `className` options set custom CSS classes for Apostrophe core widgets.
     '@apostrophecms/rich-text-widget': {
-      options: {
-        className: 'bp-rich-text'
-      }
+      options: {}
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget img-fluid'
+        className: 'img-fluid'
       }
     },
     '@apostrophecms/video-widget': {
-      options: {
-        className: 'bp-video-widget'
-      }
+      options: {}
     },
 
     // The main form module

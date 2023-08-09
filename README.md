@@ -6,14 +6,30 @@ A starter kit for building hospitality and restaurant-themed websites. Add menus
 </video>
 
 ## Get started
+### Method 1
+1. Install the project using the [Apostrophe CLI tool]() using:
+   ``` sh
+   apos create my-project --starter=marketing
+   ```
+2. Start the site using:
+   ``` sh
+   npm run dev
+   ```
+3. Login using the credentials created during project creation - note that the username is `admin`
 
-Install dependencies: `npm install`
-
-## Create Admin user
-```bash
-node app @apostrophecms/user:add admin admin
-```
-
+### Method 2
+1. Clone the template locally. You can use the GitHub desktop app or the CLI
+2. Install dependencies using: `npm install`
+3. Create Admin user
+   ```bash
+   node app @apostrophecms/user:add admin admin
+   ```
+4. Start the site using:
+   ``` sh
+   npm run dev
+   ```
+5. Login using the credentials just created - note that the username is `admin`
+   
 ## Theming
 
 Colors, fonts, and other aesthetic variables are set in `modules/asset/ui/src/scss/_theme.scss`. These can be overridden by making changes directly in the `_theme.scss` file.
@@ -63,12 +79,11 @@ Run `npm run dev` to build the Apostrophe UI and start the site up. Remember, th
 
 ## Making it your own
 
-This boilerplate is designed so you can install and start running it right away. If you are starting a project that will go into production one day, there are a few things you should be sure to check:
+This starter kit is designed so you can install and start running it right away. If you are starting a project that will go into production one day, there are a few things you should be sure to check:
 
-- [ ] **Update the shortname.** The `shortname` option in `app.js` is used for the database name (unless another is given in the `@apostrophecms/db` module). You should change this to an appropriate project name before you start adding any users or content you would like to keep.
+- [ ] **Update the shortname.** This step is not needed if you used the CLI tool for installation as it was preformed for you. The `shortname` option in `app.js` is used for the database name (unless another is given in the `@apostrophecms/db` module). You should change this to an appropriate project name before you start adding any users or content you would like to keep.
 - [ ] **Update the Express.js session secret.** The secret is set to `undefined` initially in the `modules/@apostrophecms/express/index.js` file. You should update this to a unique string.
-- [ ] **Decide if you want hot reloading on.** This boilerplate uses nodemon to restart the app when files are changed. In `modules/@apostrophecms/asset/index.js` there is an option enabled to refresh the browser on restart. If you like this, do nothing. If you don't, remove the option or set it to `false`. The option has no effect when the app is in production.
-- [ ] **Update the `className` options in `app.js`.** This option is set for core widget types to provide CSS styling hooks. It is namespaced with `bp-` for "boilerplate." You will likely want to update that to match your general CSS class naming practices.
+- [ ] **Decide if you want hot reloading on.** This starter kit uses nodemon to restart the app when files are changed. In `modules/@apostrophecms/asset/index.js` there is an option enabled to refresh the browser on restart. If you like this, do nothing. If you don't, remove the option or set it to `false`. The option has no effect when the app is in production.
 
 ## Apostrophecms module extensions
 The below Apostrophecms extensions have been included within this theme's main apostrophecms `app.js` file.
