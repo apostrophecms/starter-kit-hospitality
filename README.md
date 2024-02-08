@@ -9,7 +9,7 @@ A starter kit for building hospitality and restaurant-themed websites. Add menus
 ### Method 1
 1. Install the project using the [Apostrophe CLI tool]() using:
    ``` sh
-   apos create my-project --starter=marketing
+   apos create my-project --starter=hospitality
    ```
 2. Start the site using:
    ``` sh
