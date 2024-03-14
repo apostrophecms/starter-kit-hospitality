@@ -1,5 +1,5 @@
 # Hospitality & Restaurant Starter Kit
-A starter kit for building hospitality and restaurant-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for Apostrophe 3.
+A starter kit for building hospitality and restaurant-themed websites. Add menus, maps, galleries, pricing, team members and more with this rich starter kit for ApostropheCMS.
 
 ## Demo
 <video src="https://user-images.githubusercontent.com/1889830/257870507-bf10cd61-579d-4179-98e6-c3c8baf355d1.mp4" controls="controls" style="max-width: 730px;">
@@ -92,9 +92,9 @@ The below Apostrophecms extensions have been included within this theme's main a
 (View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
 - [ ] **@apostrophecms/open-graph.** Provides a way to edit metadata for Facebook's Open Graph standard.
 (View extension - https://apostrophecms.com/extensions/open-graph-tools-3) 
-- [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS 3.x. Adds useful meta fields to all pages and pieces.
-(View extension - https://github.com/apostrophecms/apostrophe-seo)
-- [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in Apostrophe 3.x.
+- [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS. Adds useful meta fields to all pages and pieces.
+(View extension - https://apostrophecms.com/extensions/seo-tools-3)
+- [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in ApostropheCMS.
 (View extension - https://apostrophecms.com/extensions/site-maps-3-x)
 
 ## Themes imported NPM Packages
@@ -254,7 +254,7 @@ The below Apostrophecms extensions have been included within this theme's main a
 
 ## Advanced Apostrophe configuration
 
-Right now, [all the juicy info is in the A3 docs](https://v3.docs.apostrophecms.org), so head over there and start reading! This starter kit project is a fun introduction to the UI, but you'll want to know more to really try it out.
+Right now, [all the juicy info is in the ApostropheCMS docs](https://docs.apostrophecms.org/), so head over there and start reading! This starter kit project is a fun introduction to the UI, but you'll want to know more to really try it out.
 
 ## Thanks
 ![Thanks to our partner Hellocomputer](https://static.apostrophecms.com/apostrophecms/starter-kit-hellocomputer/images/thanks.png)
