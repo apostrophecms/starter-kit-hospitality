@@ -85,8 +85,8 @@ This starter kit is designed so you can install and start running it right away.
 - [ ] **Update the Express.js session secret.** The secret is set to `undefined` initially in the `modules/@apostrophecms/express/index.js` file. You should update this to a unique string.
 - [ ] **Decide if you want hot reloading on.** This starter kit uses nodemon to restart the app when files are changed. In `modules/@apostrophecms/asset/index.js` there is an option enabled to refresh the browser on restart. If you like this, do nothing. If you don't, remove the option or set it to `false`. The option has no effect when the app is in production.
 
-## Apostrophecms module extensions
-The below Apostrophecms extensions have been included within this theme's main apostrophecms `app.js` file.
+## ApostropheCMS module extensions
+The below ApostropheCMS extensions have been included within this theme's main ApostropheCMS `app.js` file.
 
 - [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
 (View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
@@ -100,11 +100,11 @@ The below Apostrophecms extensions have been included within this theme's main a
 ## Themes imported NPM Packages
 - [ ] **dotenv.** "dotenv" is a npm package that loads environment variables from a .env file. It's useful for securely storing sensitive information like API keys, passwords, and other configuration settings.
 
-    The import statement should only be set within the main apostrophecms app.js file:
+    The import statement should only be set within the main ApostropheCMS app.js file:
     ```js
     require('dotenv').config();
     ```
-    You can then reference environment variables within the server js files for apostrophe,
+    You can then reference environment variables within the server js files for Apostrophe,
     
     ```js
     const port = process.env.PORT || 3000;
