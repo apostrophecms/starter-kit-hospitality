@@ -1,7 +1,7 @@
 const d = new Date();
 const year = d.getFullYear();
 
-module.exports = {
+export default {
   options: {
     ignoreNoCodeWarning: true,
     year: year

@@ -1,7 +1,7 @@
-const aosSchema = require('../../../lib/aosSchema.js');
-const NodeGeocoder = require('node-geocoder');
+import NodeGeocoder from 'node-geocoder';
+import aosSchema from '../../../lib/aosSchema.js';
 
-module.exports = {
+export default {
   extend: '@apostrophecms/widget-type',
   options: {
     // geocoder options can be include inside the main map-widget reference located in the /modules/content-widget-modules/modules.js file

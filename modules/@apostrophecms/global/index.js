@@ -1,7 +1,7 @@
-const linkSchema = require('../../../lib/linkSchema');
-const buttonSchema = require('../../../lib/buttonSchema');
+import linkSchema from '../../../lib/linkSchema.js';
+import buttonSchema from '../../../lib/buttonSchema.js';
 
-module.exports = {
+export default {
   fields: {
     add: {
       logo: {
@@ -37,7 +37,7 @@ module.exports = {
         limit: 5,
         fields: {
           add: {
-            ...linkSchema,
+            ...linkSchema
           }
         }
       },
@@ -48,7 +48,7 @@ module.exports = {
         limit: 5,
         fields: {
           add: {
-            ...linkSchema,
+            ...linkSchema
           }
         }
       },
@@ -94,12 +94,12 @@ module.exports = {
     group: {
       brand: {
         label: 'Brand',
-        fields: ['title', 'logo', 'social']
+        fields: [ 'title', 'logo', 'social' ]
       },
       navigations: {
         label: 'Navigations',
-        fields: ['headerNav', 'footerNav', 'headerBtns']
+        fields: [ 'headerNav', 'footerNav', 'headerBtns' ]
       }
     }
   }
-}
+};

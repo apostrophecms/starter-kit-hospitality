@@ -1,7 +1,7 @@
-const buttonSchema = require('../../../lib/buttonSchema');
-const aosSchema = require('../../../lib/aosSchema.js');
+import buttonSchema from '../../../lib/buttonSchema.js';
+import aosSchema from '../../../lib/aosSchema.js';
 
-module.exports = {
+export default {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Buttons',

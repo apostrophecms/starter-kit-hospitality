@@ -1,7 +1,7 @@
-const areaConfig = require('../../../lib/area');
-const aosSchema = require('../../../lib/aosSchema.js');
+import areaConfig from '../../../lib/area.js';
+import aosSchema from '../../../lib/aosSchema.js';
 
-module.exports = {
+export default {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Rich Text',

@@ -1,6 +1,6 @@
-module.exports = {
+export default {
   // Pieces
-  'product': {},
+  product: {},
   'team-member': {},
 
   // Related Pieces Widgets

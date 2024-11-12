@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   options: {
     groups: [
       {
@@ -48,4 +48,4 @@ module.exports = {
       }
     ]
   }
-}
+};

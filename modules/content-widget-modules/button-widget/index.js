@@ -1,6 +1,6 @@
-const buttonSchema = require('../../../lib/buttonSchema');
+import buttonSchema from '../../../lib/buttonSchema.js';
 
-module.exports = {
+export default {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Button',

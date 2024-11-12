@@ -2,7 +2,7 @@
   "name": "a3-starter-kit-hospitality",
   "version": "1.0.0",
   "description": "Hospitality starter kit for ApostropheCMS",
-  "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
