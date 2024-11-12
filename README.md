@@ -102,7 +102,9 @@ The below ApostropheCMS extensions have been included within this theme's main A
 
     The import statement should only be set within the main ApostropheCMS app.js file:
     ```js
-    require('dotenv').config();
+    import dotenv from 'dotenv';
+
+    dotenv.config();
     ```
     You can then reference environment variables within the server js files for Apostrophe,
     
@@ -186,7 +188,7 @@ The below ApostropheCMS extensions have been included within this theme's main A
 
     See a basic example of this package below:
     ```js
-    const NodeGeocoder = require('node-geocoder');
+    import NodeGeocoder from 'node-geocoder';
     ```
     Then, you can create a new instance of the "Map" class and add one or more layers to it. For example:
     ```js
@@ -245,7 +247,7 @@ The below ApostropheCMS extensions have been included within this theme's main A
     For usage within this theme, Create an instance of 'aosSchema' in your widget and add it as a field. For example:
     
     ```js
-    const aosSchema = require('../../../lib/aosSchema.js');
+    import aosSchema from '../../../lib/aosSchema.js';
     
     add: {
       ...aosSchema
