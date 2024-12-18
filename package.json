@@ -2,7 +2,7 @@
   "name": "a3-starter-kit-hospitality",
   "version": "1.0.0",
   "description": "Hospitality starter kit for ApostropheCMS",
-  "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
@@ -15,6 +15,7 @@
     "verbose": true,
     "watch": [
       "./app.js",
+      "./apos.vite.config.js",
       "./modules/**/*",
       "./lib/**/*.js",
       "./views/**/*.html"
@@ -44,6 +45,7 @@
     "@apostrophecms/open-graph": "^1.2.1",
     "@apostrophecms/seo": "^1.2.0",
     "@apostrophecms/sitemap": "^1.0.2",
+    "@apostrophecms/vite": "^1.0.0",
     "aos": "^2.3.4",
     "apostrophe": "^4.0.0",
     "dotenv": "^16.0.3",
@@ -55,6 +57,7 @@
     "swiper": "^9.2.3"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "eslint": "^7.16.0",
     "eslint-config-apostrophe": "^3.4.0",
     "eslint-plugin-node": "^11.1.0",

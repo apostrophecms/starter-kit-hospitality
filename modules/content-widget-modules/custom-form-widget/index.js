@@ -1,6 +1,6 @@
-const aosSchema = require('../../../lib/aosSchema.js');
+import aosSchema from '../../../lib/aosSchema.js';
 
-module.exports = {
+export default {
   extend: '@apostrophecms/widget-type',
   options: {
     label: 'Custom Form',

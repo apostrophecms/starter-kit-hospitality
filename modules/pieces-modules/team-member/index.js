@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extend: '@apostrophecms/piece-type',
   options: {
     label: 'Team Member',
@@ -29,7 +29,7 @@ module.exports = {
     },
     group: {
       basics: {
-        fields: ['title', 'profileImage', 'workTitle']
+        fields: [ 'title', 'profileImage', 'workTitle' ]
       }
     }
   }

@@ -1,6 +1,10 @@
-require('dotenv').config();
+import apostrophe from 'apostrophe';
+import dotenv from 'dotenv';
 
-require('apostrophe')({
+dotenv.config();
+
+apostrophe({
+  root: import.meta,
   shortName: 'starter-kit-hospitality',
   baseUrl: process.env.APOS_BASE_URL || 'http://localhost:3000',
   nestedModuleSubdirs: true,
@@ -69,6 +73,8 @@ require('apostrophe')({
       options: {
         ignoreNoCodeWarning: true
       }
-    }
+    },
+    // Use Vite bundler
+    '@apostrophecms/vite': {}
   }
 });

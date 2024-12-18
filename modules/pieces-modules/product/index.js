@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extend: '@apostrophecms/piece-type',
   options: {
     label: 'Product',
@@ -25,7 +25,7 @@ module.exports = {
     },
     group: {
       basics: {
-        fields: ['title', 'description', 'price']
+        fields: [ 'title', 'description', 'price' ]
       }
     }
   }
