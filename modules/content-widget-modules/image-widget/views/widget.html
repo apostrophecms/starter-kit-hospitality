@@ -1,8 +1,12 @@
+{% set attachment = apos.image.first(data.widget._image) %}
+{% set width = data.widget.width + '%' if (data.widget.width and data.widget.width < 100) else '' %}
+
 <section data-aos="{{ data.widget.animationEffects }}" class="container widget-my-spacing">
   {% if data.widget.aposPlaceholder and data.manager.options.placeholderUrl %}
     <img
       src="{{ data.manager.options.placeholderUrl }}"
       alt="{{ __t('apostrophe:imagePlaceholder') }}"
+      {% if width %} style="width: {{ width }}"{% endif %}
       class="image-widget-placeholder"
     />
   {% else %}
@@ -11,11 +15,10 @@
     {% set loadingType = data.options.loadingType or data.manager.options.loadingType %}
     {% set size = data.options.size or data.manager.options.size or 'full' %}
 
-    {% set attachment = apos.image.first(data.widget._image) %}
-
     {% if attachment %}
       <img {% if className %} class="{{ className }}"{% endif %}
         {% if loadingType %} loading="{{ loadingType }}"{% endif %}
+        {% if width %} style="width: {{ width }};"{% endif %}
         srcset="{{ apos.image.srcset(attachment) }}"
         src="{{ apos.attachment.url(attachment, { size: size }) }}"
         alt="{{ attachment._alt or '' }}"
