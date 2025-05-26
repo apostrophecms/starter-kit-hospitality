@@ -47,7 +47,7 @@
     "@apostrophecms/sitemap": "^1.0.2",
     "@apostrophecms/vite": "^1.0.0",
     "aos": "^2.3.4",
-    "apostrophe": "^4.0.0",
+    "apostrophe": "^4.18.0",
     "dotenv": "^16.0.3",
     "node-geocoder": "^4.2.0",
     "normalize.css": "^8.0.1",
