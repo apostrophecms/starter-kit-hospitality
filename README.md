@@ -89,13 +89,13 @@ This starter kit is designed so you can install and start running it right away.
 The below ApostropheCMS extensions have been included within this theme's main ApostropheCMS `app.js` file.
 
 - [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
-(View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
+(View extension - https://apostrophecms.com/extensions/form-builder-2) 
 - [ ] **@apostrophecms/open-graph.** Provides a way to edit metadata for Facebook's Open Graph standard.
 (View extension - https://apostrophecms.com/extensions/open-graph-tools-3) 
 - [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS. Adds useful meta fields to all pages and pieces.
 (View extension - https://apostrophecms.com/extensions/seo-tools-3)
 - [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in ApostropheCMS.
-(View extension - https://apostrophecms.com/extensions/site-maps-3-x)
+(View extension - https://apostrophecms.com/extensions/site-maps)
 
 ## Themes imported NPM Packages
 - [ ] **dotenv.** "dotenv" is a npm package that loads environment variables from a .env file. It's useful for securely storing sensitive information like API keys, passwords, and other configuration settings.
