@@ -1,5 +1,10 @@
 {%- import "@apostrophecms/image-widget:fragment.html" as image -%}
-<section data-aos="{{ data.widget.animationEffects }}" class="container widget-my-spacing">
+{#- Ensure we have animations only if the widget is not loaded via the
+  REST API. Basically an "edit mode" detection. If not done here, 
+  the AOS module breaks our "apos-area-widget-guard" overlay and we
+  can't select an image in edit mode. -#}
+{%- set dataAos = data.widget.animationEffects if not data.widget._virtual else '' -%}
+<section data-aos="{{ dataAos }}" class="container widget-my-spacing">
 {% render image.render(
   widget = data.widget, 
   options = data.options,
