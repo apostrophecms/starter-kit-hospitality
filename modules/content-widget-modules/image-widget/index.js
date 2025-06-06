@@ -1,7 +1,7 @@
 import aosSchema from '../../../lib/aosSchema.js';
 
 export default {
-  extend: '@apostrophecms/widget-type',
+  extend: '@apostrophecms/image-widget',
   options: {
     icon: 'image-icon',
     label: 'Image',
@@ -11,13 +11,6 @@ export default {
   },
   fields: {
     add: {
-      _image: {
-        type: 'relationship',
-        withType: '@apostrophecms/image',
-        label: 'Image',
-        required: true,
-        max: 1
-      },
       ...aosSchema
     }
   }
