@@ -24,7 +24,7 @@ export default () => {
         const longitude = mapEl.dataset.longitude;
 
         // Convert the latitude and longitude to the map's projection
-        const coords = fromLonLat([longitude, latitude]);
+        const coords = fromLonLat([ longitude, latitude ]);
 
         const map = new Map({
           layers: [
@@ -46,7 +46,7 @@ export default () => {
 
         // Update the position variable with new latitude and longitude values
         function updatePosition(lat, lng) {
-          const newCoords = fromLonLat([lng, lat]);
+          const newCoords = fromLonLat([ lng, lat ]);
           position = newCoords;
         }
 
@@ -67,7 +67,7 @@ export default () => {
         // Add the marker to a vector layer
         const vectorLayer = new VectorLayer({
           source: new VectorSource({
-            features: [marker]
+            features: [ marker ]
           })
         });
 
