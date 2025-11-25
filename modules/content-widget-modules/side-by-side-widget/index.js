@@ -1,40 +1,28 @@
-import areaConfig from '../../../lib/area.js';
-import aosSchema from '../../../lib/aosSchema.js';
-
 export default {
-  extend: '@apostrophecms/widget-type',
+  extend: '@apostrophecms/layout-widget',
   options: {
     label: 'Side by side',
     icon: 'layout-side-icon',
     description: 'Display two sections of content side by side',
-    previewImage: 'jpg'
+    previewImage: 'jpg',
+    columns: 2,
+    minSpan: 1,
+    defaultSpan: 1,
+    gap: '1rem'
   },
   icons: {
     'layout-side-icon': 'PageLayoutSidebarRight'
   },
   fields: {
     add: {
-      invert: {
-        type: 'boolean',
-        label: 'Invert columns',
-        required: true,
-        def: false
-      },
-      one: {
+      columns: {
         type: 'area',
-        contextual: true,
         options: {
-          widgets: areaConfig.all
+          widgets: {
+            'side-by-side-content': {}
+          }
         }
-      },
-      two: {
-        type: 'area',
-        contextual: true,
-        options: {
-          widgets: areaConfig.all
-        }
-      },
-      ...aosSchema
+      }
     }
   }
 };
