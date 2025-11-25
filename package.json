@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app",
     "dev": "nodemon",
-    "build": "NODE_ENV=production node app @apostrophecms/asset:build",
-    "serve": "NODE_ENV=production node app",
+    "build": "cross-env NODE_ENV=production node app @apostrophecms/asset:build",
+    "serve": "cross-env NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
   },
   "nodemonConfig": {
@@ -48,6 +48,7 @@
     "@apostrophecms/vite": "^1.0.0",
     "aos": "^2.3.4",
     "apostrophe": "^4.18.0",
+    "cross-env": "^10.1.0",
     "dotenv": "^16.0.3",
     "node-geocoder": "^4.2.0",
     "normalize.css": "^8.0.1",
